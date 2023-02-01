@@ -14,7 +14,7 @@ namespace Genshin_Impact_Mod
 {
 	internal static class Program
 	{
-		public static readonly string AppName = Application.ProductVersion;
+		public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
 		public static readonly string AppVersion = Application.ProductVersion;
 		public const string AppWebsite = "https://sefinek.net/genshin-impact-reshade";
 
