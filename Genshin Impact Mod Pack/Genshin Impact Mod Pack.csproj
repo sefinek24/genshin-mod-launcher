@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9DDC941-CB15-4B3C-8BA1-8F559F70480D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Genshin_Impact_Mod</RootNamespace>
+    <AssemblyName>Genshin Impact Mod Launcher</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Genshin_Impact_Mod.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\52x52.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigDefault.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Forms\Errors\ErrorOccurred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Errors\ErrorOccurred.Designer.cs">
+      <DependentUpon>ErrorOccurred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other\Gallery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other\Gallery.Designer.cs">
+      <DependentUpon>Gallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Errors\NotCompatible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Errors\NotCompatible.Designer.cs">
+      <DependentUpon>NotCompatible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Errors\NotConfigured.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Errors\NotConfigured.Designer.cs">
+      <DependentUpon>NotConfigured.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other\RandomImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other\RandomImg.Designer.cs">
+      <DependentUpon>RandomImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Other\SupportMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Other\SupportMe.Designer.cs">
+      <DependentUpon>SupportMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools.Designer.cs">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tutorial.Designer.cs">
+      <DependentUpon>Tutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Links.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Links.Designer.cs">
+      <DependentUpon>Links.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Errors\WrongDirectory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Errors\WrongDirectory.Designer.cs">
+      <DependentUpon>WrongDirectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Remote.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Cmd.cs" />
+    <Compile Include="Scripts\Discord.cs" />
+    <Compile Include="Scripts\Log.cs" />
+    <Compile Include="Scripts\Os.cs" />
+    <Compile Include="Scripts\Utils.cs" />
+    <Compile Include="Scripts\WebView2Handler.cs" />
+    <EmbeddedResource Include="Forms\Errors\ErrorOccurred.resx">
+      <DependentUpon>ErrorOccurred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\Gallery.resx">
+      <DependentUpon>Gallery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Errors\NotCompatible.resx">
+      <DependentUpon>NotCompatible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Errors\NotConfigured.resx">
+      <DependentUpon>NotConfigured.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\RandomImg.resx">
+      <DependentUpon>RandomImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Other\SupportMe.resx">
+      <DependentUpon>SupportMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools.resx">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tutorial.resx">
+      <DependentUpon>Tutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Links.resx">
+      <DependentUpon>Links.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Errors\WrongDirectory.resx">
+      <DependentUpon>WrongDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kokomi_2.png" />
+    <None Include="Resources\GenshinImpact_2023-01-13_12-39-30.png" />
+    <None Include="Resources\youtube_video.png" />
+    <None Include="Resources\kokomi_1.png" />
+    <None Include="Resources\random_images.jpg" />
+    <None Include="Resources\tutorial.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\52x52.ico" />
+    <None Include="Resources\775295135108825088.gif" />
+    <None Include="Resources\party-popper_1f389.png" />
+    <None Include="Resources\asdfasfa.png" />
+    <None Include="Resources\352967288013211.png" />
+    <None Include="Resources\icons8-edit-property-96.png" />
+    <None Include="Resources\icons8-tools-65.png" />
+    <None Include="Resources\icons8-notepad-96 %281%29.png" />
+    <None Include="Resources\icons8-ko-fi-48.png" />
+    <None Include="Resources\poland %281%29.png" />
+    <None Include="Resources\united-kingdom %282%29.png" />
+    <None Include="Resources\icons8-info-squared-96.png" />
+    <Content Include="Data\music.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\icons8-gear-94.png" />
+    <None Include="Resources\icons8-web-48.png" />
+    <None Include="Resources\9a922c14615f616b3be16ae06aa0fdac.jpg" />
+    <None Include="Resources\29b20e63b8d94849ed201c4fac3f2312357d088dr1-1024-1015v2_00.jpg" />
+    <None Include="Resources\exchange.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\icons8-update-48.png" />
+    <None Include="Resources\icons8-discord-481.png" />
+    <None Include="Resources\icons8-youtube-48.png" />
+    <None Include="Resources\icons8-available-updates-48.png" />
+    <None Include="Resources\icons8-support-48.png" />
+    <None Include="Resources\icons8-download-from-the-cloud-48.png" />
+    <None Include="Resources\icons8-shortcut-58.png" />
+    <None Include="Resources\icons8-recycle-bin-48.png" />
+    <None Include="Resources\icons8-animated-48.png" />
+    <None Include="Resources\icons8-github-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ByteSize">
+      <Version>2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="CliWrap">
+      <Version>3.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="discord-webhook-client">
+      <Version>3.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="DiscordRichPresence">
+      <Version>1.1.3.18</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Web.WebView2">
+      <Version>1.0.1518.46</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
