@@ -1,4 +1,4 @@
 <div align="center">
-    <h1>📥 Installation wizard for Genshin Impact Mod</h1>
+    <h1>🌌 Official launcher for Genshin Impact Mod</h1>
     <i>Open source project.</i>
 </div>
