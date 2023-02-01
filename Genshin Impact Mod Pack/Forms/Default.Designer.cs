@@ -68,6 +68,7 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -667,6 +668,23 @@
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Visible = false;
             // 
+            // linkLabel8
+            // 
+            this.linkLabel8.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel8.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel8.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel8.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel8.Location = new System.Drawing.Point(538, 83);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(99, 21);
+            this.linkLabel8.TabIndex = 89;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "Beta release";
+            this.linkLabel8.Click += new System.EventHandler(this.Beta_Click);
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -675,6 +693,7 @@
             this.BackgroundImage = global::Genshin_Impact_Mod.Properties.Resources.kokomi_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1032, 579);
+            this.Controls.Add(this.linkLabel8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.linkLabel7);
@@ -775,6 +794,7 @@
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label3;
-    }
+		private System.Windows.Forms.LinkLabel linkLabel8;
+	}
 }
 

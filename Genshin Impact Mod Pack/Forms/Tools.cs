@@ -69,7 +69,7 @@ namespace Genshin_Impact_Mod.Forms
 				IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutAddress);
 
 				shortcut.Description = "Run official mod launcher made by Sefinek.";
-				shortcut.IconLocation = Environment.CurrentDirectory + @"\Data\Icons\52x52.ico";
+				shortcut.IconLocation = Environment.CurrentDirectory + @"\icons\52x52.ico";
 				shortcut.WorkingDirectory = Environment.CurrentDirectory;
 				shortcut.TargetPath = Assembly.GetExecutingAssembly().Location;
 				shortcut.Save();

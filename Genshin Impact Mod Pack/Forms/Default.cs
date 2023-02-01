@@ -214,7 +214,7 @@ namespace Genshin_Impact_Mod.Forms
 					string fpsUnlockerCfg = File.ReadAllText(Program.UnlockerFpsPath);
 					File.WriteAllText(Program.UnlockerFpsPath, fpsUnlockerCfg.Replace("{GamePath}", @"C:\\Program Files\\Genshin Impact\\Genshin Impact game\\GenshinImpact.exe"));
 
-					status_Label.Text += @"[✔] Success!\n";
+					status_Label.Text += "[✔] Success!\n";
 				}
 				catch (Exception ex)
 				{
@@ -475,6 +475,11 @@ namespace Genshin_Impact_Mod.Forms
 			RandomImg frm = new RandomImg { Location = Location, Icon = Resources.icon_52x52 };
 			if (Application.OpenForms.OfType<RandomImg>().Count() == 1) Application.OpenForms.OfType<RandomImg>().First().Close();
 			frm.Show();
+		}
+
+		private void Beta_Click(object sender, EventArgs e)
+		{
+			Process.Start("https://www.youtube.com/watch?v=VzdQ6eFWeR0");
 		}
 	}
 }
