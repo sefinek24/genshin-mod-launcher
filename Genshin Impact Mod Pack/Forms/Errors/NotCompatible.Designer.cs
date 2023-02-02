@@ -53,7 +53,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(221, 39);
+            this.label2.Location = new System.Drawing.Point(221, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(629, 45);
             this.label2.TabIndex = 2;
@@ -65,7 +65,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(221, 94);
+            this.label1.Location = new System.Drawing.Point(221, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(629, 27);
             this.label1.TabIndex = 3;

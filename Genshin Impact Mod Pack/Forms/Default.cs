@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Media;
 using System.Net;
-using System.Reflection.Emit;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -105,12 +104,11 @@ namespace Genshin_Impact_Mod.Forms
 			Close();
 		}
 
-		// Check updates...
 		private async Task<int> CheckUpdates()
 		{
 			updates_Label.LinkColor = Color.White;
 			updates_Label.Text = @"Checking for updates...";
-			Log.Output("Checking for new updates...");
+			Log.Output("Checking for new versions...");
 
 			try
 			{
@@ -121,21 +119,28 @@ namespace Genshin_Impact_Mod.Forms
 
 				if (res.Version[0] != Program.AppVersion[0])
 				{
-					new NotCompatible { Icon = Resources.icon_52x52 }.ShowDialog();
+					version_Label.Text = $"v{Program.AppVersion} → v{res.Version}";
+
+					updates_Label.LinkColor = Color.Cyan;
+					updates_Label.Text = "Major version is available";
+					update_Icon.Image = Resources.icons8_download_from_the_cloud;
 
 					Log.Output($"New major version is available: v{Program.AppVersion} → v{res.Version} ({res.Date})");
+
 					UpdateIsAvailable = true;
+					new NotCompatible { Icon = Resources.icon_52x52 }.ShowDialog();
+
 					Environment.Exit(0);
 				}
 
 				if (res.Version != Program.AppVersion)
 				{
 					// 1
-					version_Label.Text = $@"v{Program.AppVersion} → v{res.Version}";
+					version_Label.Text = $"v{Program.AppVersion} → v{res.Version}";
 
 					// 2
 					updates_Label.LinkColor = Color.Cyan;
-					updates_Label.Text = @"Click here to update";
+					updates_Label.Text = "Click here to update";
 					update_Icon.Image = Resources.icons8_download_from_the_cloud;
 					Utils.RemoveClickEvent(updates_Label);
 					updates_Label.Click += Update_Event;
@@ -162,6 +167,7 @@ namespace Genshin_Impact_Mod.Forms
 
 					Log.Output($"New release is available: v{Program.AppVersion} → v{res.Version} [{updateSize} MB]");
 
+					// Hide and show elements
 					progressBar1.Hide();
 					label3.Hide();
 					label3.Text = "Preparning... If process is stuck, reopen launcher.";
@@ -179,6 +185,8 @@ namespace Genshin_Impact_Mod.Forms
 
 				updates_Label.Text = @"Check for updates";
 				update_Icon.Image = Resources.icons8_available_updates;
+
+				Log.Output($"Not found any new updates. Your installed version: v{Program.AppVersion}");
 				return 0;
 			}
 			catch (Exception e)
@@ -204,6 +212,7 @@ namespace Genshin_Impact_Mod.Forms
 			if (!File.Exists(Program.UnlockerFpsPath))
 			{
 				status_Label.Text += "[i] Downloading config file for FPS Unlocker...\n";
+				Log.Output("Downloading config file for FPS Unlocker...");
 
 				try
 				{
@@ -215,10 +224,14 @@ namespace Genshin_Impact_Mod.Forms
 					File.WriteAllText(Program.UnlockerFpsPath, fpsUnlockerCfg.Replace("{GamePath}", @"C:\\Program Files\\Genshin Impact\\Genshin Impact game\\GenshinImpact.exe"));
 
 					status_Label.Text += "[✔] Success!\n";
+					Log.Output("Done.");
 				}
 				catch (Exception ex)
 				{
 					status_Label.Text += $"[✖] {ex.Message}\n";
+
+					Log.Output($"Failed. {ex.Message}");
+					Log.ErrorAuditLog(ex);
 				}
 			}
 
@@ -228,6 +241,7 @@ namespace Genshin_Impact_Mod.Forms
 			{
 				File.Delete(SetupPathExe);
 				status_Label.Text += "[i] Deleted old setup file from temp directory.\n";
+				Log.Output($"Deleted old setup file from temp folder: {SetupPathExe}");
 			}
 
 			await CheckUpdates();
@@ -337,7 +351,7 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Discord_Button(object sender, EventArgs e)
 		{
-			Process.Start("https://discord.com/invite/SVcbaRc7gH");
+			Process.Start(Discord.Invitation);
 		}
 
 		private void YouTube_Button(object sender, EventArgs e)

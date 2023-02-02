@@ -4,8 +4,6 @@ using System.Windows.Forms;
 using CliWrap;
 using CliWrap.Buffered;
 using Genshin_Impact_Mod.Forms;
-using Genshin_Impact_Mod.Forms.Errors;
-using Genshin_Impact_Mod.Properties;
 
 namespace Genshin_Impact_Mod.Scripts
 {
@@ -13,14 +11,6 @@ namespace Genshin_Impact_Mod.Scripts
 	{
 		public static async Task Execute(string app, string args, string workingDir, bool exit, bool bypassUpdates, bool downloadSetup)
 		{
-			string fileData = Utils.IsInstalledFile_Create();
-			if (fileData == "false")
-			{
-				new NotConfigured { Icon = Resources.icon_52x52 }.ShowDialog();
-
-				return;
-			}
-
 			try
 			{
 				Log.Output($"Execute command: {app} {args} {workingDir}");
@@ -32,6 +22,7 @@ namespace Genshin_Impact_Mod.Scripts
 					return;
 				}
 
+				// CliWrap
 				Command action = Cli.Wrap(app).WithArguments(args).WithWorkingDirectory(workingDir).WithValidation(CommandResultValidation.None);
 				BufferedCommandResult result = await action.ExecuteBufferedAsync();
 
@@ -40,7 +31,9 @@ namespace Genshin_Impact_Mod.Scripts
 				string stderr = result.StandardError;
 
 				// StandardOutput
-				Log.Output($"{app} successfully, exit code: {result.ExitCode}, start time: {result.StartTime}, exit time: {result.ExitTime}\n✅ STDOUT: {stdout}\n❌ STDERR: {stderr}");
+				string stdoutLine = !string.IsNullOrEmpty(stdout) ? $"\n✅ STDOUT: {stdout}" : "";
+				string stderrLine = !string.IsNullOrEmpty(stderr) ? $"\n❌ STDERR: {stderr}" : "";
+				Log.Output($"Successfully executed {app} command. Exit code: {result.ExitCode}, start time: {result.StartTime}, exit time: {result.ExitTime}{stdoutLine}{stderrLine}");
 
 				// StandardError
 				if (result.ExitCode != 0)
@@ -57,7 +50,7 @@ namespace Genshin_Impact_Mod.Scripts
 						Log.ErrorAuditLog(new Exception(info));
 				}
 
-
+				// Exit
 				if (exit) Application.Exit();
 			}
 			catch (Exception ex)

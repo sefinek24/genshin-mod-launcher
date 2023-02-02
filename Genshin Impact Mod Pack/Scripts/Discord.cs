@@ -9,6 +9,8 @@ namespace Genshin_Impact_Mod.Scripts
 {
 	internal abstract class Discord
 	{
+		public static readonly string Invitation = "https://discord.com/invite/SVcbaRc7gH";
+
 		private const int DiscordPipe = -1;
 		private static readonly LogLevel LogLevel = LogLevel.Trace;
 
@@ -61,7 +63,6 @@ namespace Genshin_Impact_Mod.Scripts
 		public static async void SendLogFiles()
 		{
 			Console.ForegroundColor = ConsoleColor.Blue;
-			Console.Write("Sending... ");
 
 			try
 			{

@@ -1,6 +1,6 @@
 ﻿namespace Genshin_Impact_Mod.Forms.Errors
 {
-    partial class NotConfigured
+    partial class NotInstalledViaSetup
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotConfigured));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,7 +46,9 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(568, 61);
             this.label1.TabIndex = 0;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.label1.Text = "This program is not installed using our installation wizard. Make sure you have i" +
+    "nstalled all required dependencies. Good luck!\r\nIf you need help add me on Disco" +
+    "rd: Sefinek#0001";
             // 
             // label2
             // 
@@ -58,14 +59,14 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(572, 45);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Information";
+            this.label2.Text = "Important information";
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(226, 145);
+            this.button1.Location = new System.Drawing.Point(433, 145);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 34);
             this.button1.TabIndex = 3;
@@ -91,13 +92,13 @@
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(436, 145);
+            this.button3.Location = new System.Drawing.Point(227, 145);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 34);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Tutorial on YouTube";
+            this.button3.Text = "Dependency list";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Youtube_Button);
+            this.button3.Click += new System.EventHandler(this.DependencyList_Click);
             // 
             // pictureBox1
             // 
@@ -110,7 +111,7 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // NotConfigured
+            // NotInstalledViaSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,7 +125,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "NotConfigured";
+            this.Name = "NotInstalledViaSetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Genshin Impact Mod Pack";
             this.Load += new System.EventHandler(this.NotConfigured_Load);

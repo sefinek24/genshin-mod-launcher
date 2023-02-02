@@ -75,8 +75,7 @@ namespace Genshin_Impact_Mod.Forms
 		private void Gallery_Button(object sender, EventArgs e)
 		{
 			Gallery frm = new Gallery { Icon = Resources.icon_52x52 };
-			if (Application.OpenForms.OfType<Gallery>().Count() == 1)
-				Application.OpenForms.OfType<Gallery>().First().Close();
+			if (Application.OpenForms.OfType<Gallery>().Count() == 1) Application.OpenForms.OfType<Gallery>().First().Close();
 			frm.Show();
 		}
 

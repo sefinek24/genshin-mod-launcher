@@ -99,11 +99,11 @@
     <Compile Include="Forms\Errors\NotCompatible.Designer.cs">
       <DependentUpon>NotCompatible.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Errors\NotConfigured.cs">
+    <Compile Include="Forms\Errors\NotInstalledViaSetup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Errors\NotConfigured.Designer.cs">
-      <DependentUpon>NotConfigured.cs</DependentUpon>
+    <Compile Include="Forms\Errors\NotInstalledViaSetup.Designer.cs">
+      <DependentUpon>NotInstalledViaSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Other\RandomImg.cs">
       <SubType>Form</SubType>
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="Forms\Errors\NotCompatible.resx">
       <DependentUpon>NotCompatible.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Errors\NotConfigured.resx">
-      <DependentUpon>NotConfigured.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Errors\NotInstalledViaSetup.resx">
+      <DependentUpon>NotInstalledViaSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\RandomImg.resx">
       <DependentUpon>RandomImg.cs</DependentUpon>
@@ -193,6 +193,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="www\api\launcher.version.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

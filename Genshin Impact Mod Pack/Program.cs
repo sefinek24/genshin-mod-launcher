@@ -16,7 +16,7 @@ namespace Genshin_Impact_Mod
 	{
 		public static readonly string AppName = Assembly.GetExecutingAssembly().GetName().Name;
 		public static readonly string AppVersion = Application.ProductVersion;
-		public const string AppWebsite = "https://sefinek.net/genshin-impact-reshade";
+		public static readonly string AppWebsite = "https://sefinek.net/genshin-impact-reshade";
 
 		// Directories
 		public const string Folder = @"C:\Genshin-Impact-ReShade";
@@ -25,6 +25,7 @@ namespace Genshin_Impact_Mod
 
 		// Files
 		public static readonly string UnlockerFpsPath = Folder + @"\Data\Unlocker\unlocker.config.json";
+		private static readonly string InstalledViaSetup = AppData + @"\installed-via-setup.sfn";
 		private static readonly string LaunchCountFile = AppData + @"\launch-count.sfn";
 		private static readonly string TierActivated = AppData + @"\tier-activated.sfn";
 
@@ -35,6 +36,8 @@ namespace Genshin_Impact_Mod
 		[STAThread]
 		private static void Main()
 		{
+			Log.Output("Opening launcher...");
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
@@ -45,17 +48,18 @@ namespace Genshin_Impact_Mod
 				Environment.Exit(0);
 			}
 
-			string fileData = Utils.IsInstalledFile_Create();
-			if (fileData == "false")
+			if (!File.Exists(InstalledViaSetup))
 			{
-				new NotConfigured { Icon = Resources.icon_52x52 }.ShowDialog();
+				new NotInstalledViaSetup { Icon = Resources.icon_52x52 }.ShowDialog();
 
-				Environment.Exit(0);
+				File.Create(InstalledViaSetup);
 			}
 
 			if (Process.GetProcessesByName(Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)).Count() > 1)
 			{
 				MessageBox.Show($"Sorry, one instance is currently open.\n\nQuit the process with name {Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)} and try again.", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+				Log.Output("One instance is currently open.");
 				Environment.Exit(0);
 			}
 
@@ -80,8 +84,26 @@ namespace Genshin_Impact_Mod
 
 				switch (number)
 				{
+					case 2:
+					case 10:
+					case 15:
+						DialogResult discordResult = MessageBox.Show("Do you want join to our Discord server?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+						Log.Output("Question (MessageBox): Do you want join to our Discord server?");
+
+						if (discordResult == DialogResult.Yes)
+						{
+							Process.Start(Discord.Invitation);
+							Log.Output("Selected: Yes");
+						}
+						else
+						{
+							Log.Output("Selected: No");
+						}
+
+						break;
+
 					case 4:
-					case 13:
+					case 20:
 					case 42:
 					case 63:
 						Application.Run(new SupportMe { Icon = Resources.icon_52x52 });
@@ -93,13 +115,23 @@ namespace Genshin_Impact_Mod
 					case 60:
 					case 100:
 					case 200:
-						DialogResult dialogResult1 = MessageBox.Show("Do you want to send us anonymous log files?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-						if (dialogResult1 == DialogResult.Yes)
+						DialogResult logFilesResult = MessageBox.Show("Do you want to send us anonymous log files?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+						Log.Output("Question (MessageBox): Do you want to send log files?");
+
+						if (logFilesResult == DialogResult.Yes)
 						{
 							Discord.SendLogFiles();
 
-							DialogResult dialogResult2 = MessageBox.Show("Thank you! Do you want to see these files?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-							if (dialogResult2 == DialogResult.Yes) Process.Start(Log.Folder);
+							DialogResult showFilesResult = MessageBox.Show("Thank you! Do you want to see these files?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+							if (showFilesResult == DialogResult.Yes)
+							{
+								Process.Start(Log.Folder);
+								Log.Output($"Opened: {Log.Folder}");
+							}
+						}
+						else
+						{
+							Log.Output("Selected: No");
 						}
 
 						break;
