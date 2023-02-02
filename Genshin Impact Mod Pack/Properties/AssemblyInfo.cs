@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sefinek Inc.")]
 [assembly: AssemblyProduct("The best Genshin Impact mod pack with custom presets for ReShade and FPS Unlocker.")]
-[assembly: AssemblyCopyright("Copyright 2022 © by Sefinek. All Rights Reserved.")]
+[assembly: AssemblyCopyright("Copyright 2023 © by Sefinek. All Rights Reserved.")]
 [assembly: AssemblyTrademark("© Sefinek Inc.")]
 [assembly: AssemblyCulture("")]
 
