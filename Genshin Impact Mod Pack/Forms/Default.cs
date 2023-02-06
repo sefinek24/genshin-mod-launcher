@@ -465,7 +465,8 @@ namespace Genshin_Impact_Mod.Forms
 		{
 			if (!Directory.Exists($@"{Program.AppData}\updates")) Directory.CreateDirectory($@"{Program.AppData}\updates");
 
-			await Cmd.Execute(SetupPathExe, $"/LOG=\"{Program.AppData}\\updates\\1.log", null, false, true, true);
+			string date = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
+			await Cmd.Execute(SetupPathExe, $"/NORESTART /LOG=\"{Program.AppData}\\updates\\{date}.log", null, false, true, true);
 
 			label3.Text = "✖ Bruh. Operation was canceled.";
 
