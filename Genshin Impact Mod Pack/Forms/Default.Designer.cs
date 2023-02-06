@@ -236,7 +236,7 @@
             this.linkLabel2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.linkLabel2.Location = new System.Drawing.Point(41, 485);
+            this.linkLabel2.Location = new System.Drawing.Point(41, 469);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(124, 23);
             this.linkLabel2.TabIndex = 89;
@@ -254,7 +254,7 @@
             this.linkLabel4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel4.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(0)))));
-            this.linkLabel4.Location = new System.Drawing.Point(41, 509);
+            this.linkLabel4.Location = new System.Drawing.Point(41, 515);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(74, 23);
             this.linkLabel4.TabIndex = 90;
@@ -362,14 +362,14 @@
             this.linkLabel1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(217)))), ((int)(((byte)(235)))));
-            this.linkLabel1.Location = new System.Drawing.Point(41, 461);
+            this.linkLabel1.Location = new System.Drawing.Point(41, 492);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(140, 23);
+            this.linkLabel1.Size = new System.Drawing.Size(99, 23);
             this.linkLabel1.TabIndex = 100;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Buy me a Coffee";
+            this.linkLabel1.Text = "Support me";
             this.toolTip1.SetToolTip(this.linkLabel1, "Buy Me a Coffee at ko-fi.com.");
-            this.linkLabel1.Click += new System.EventHandler(this.KoFi_Click);
+            this.linkLabel1.Click += new System.EventHandler(this.SupportMe_Click);
             // 
             // linkLabel7
             // 
@@ -418,10 +418,10 @@
             this.version_Label.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.version_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.version_Label.LinkColor = System.Drawing.Color.White;
-            this.version_Label.Location = new System.Drawing.Point(736, 515);
+            this.version_Label.Location = new System.Drawing.Point(784, 517);
             this.version_Label.Name = "version_Label";
             this.version_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.version_Label.Size = new System.Drawing.Size(255, 23);
+            this.version_Label.Size = new System.Drawing.Size(207, 23);
             this.version_Label.TabIndex = 85;
             this.version_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip1.SetToolTip(this.version_Label, "See changelog on GitHub.");
@@ -490,7 +490,7 @@
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox7.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_support;
-            this.pictureBox7.Location = new System.Drawing.Point(997, 515);
+            this.pictureBox7.Location = new System.Drawing.Point(997, 516);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(23, 23);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -505,10 +505,10 @@
             this.updates_Label.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updates_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.updates_Label.LinkColor = System.Drawing.Color.White;
-            this.updates_Label.Location = new System.Drawing.Point(736, 544);
+            this.updates_Label.Location = new System.Drawing.Point(784, 544);
             this.updates_Label.Name = "updates_Label";
             this.updates_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.updates_Label.Size = new System.Drawing.Size(255, 23);
+            this.updates_Label.Size = new System.Drawing.Size(207, 23);
             this.updates_Label.TabIndex = 85;
             this.updates_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.updates_Label.Click += new System.EventHandler(this.CheckUpdates_Click);
@@ -519,7 +519,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_youtube;
-            this.pictureBox8.Location = new System.Drawing.Point(12, 509);
+            this.pictureBox8.Location = new System.Drawing.Point(12, 515);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(23, 23);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -533,7 +533,7 @@
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_discord;
-            this.pictureBox9.Location = new System.Drawing.Point(12, 485);
+            this.pictureBox9.Location = new System.Drawing.Point(12, 469);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(23, 23);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -545,12 +545,12 @@
             // 
             this.status_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.status_Label.BackColor = System.Drawing.Color.Transparent;
-            this.status_Label.Cursor = System.Windows.Forms.Cursors.Help;
+            this.status_Label.Cursor = System.Windows.Forms.Cursors.Default;
             this.status_Label.Font = new System.Drawing.Font("Consolas", 9.75F);
             this.status_Label.ForeColor = System.Drawing.Color.Snow;
             this.status_Label.Location = new System.Drawing.Point(9, 45);
             this.status_Label.Name = "status_Label";
-            this.status_Label.Size = new System.Drawing.Size(511, 105);
+            this.status_Label.Size = new System.Drawing.Size(511, 138);
             this.status_Label.TabIndex = 96;
             // 
             // pictureBox6
@@ -573,13 +573,13 @@
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox10.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_ko_fi;
-            this.pictureBox10.Location = new System.Drawing.Point(12, 461);
+            this.pictureBox10.Location = new System.Drawing.Point(12, 492);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(23, 23);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 99;
             this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.KoFi_Click);
+            this.pictureBox10.Click += new System.EventHandler(this.SupportMe_Click);
             // 
             // panel3
             // 
@@ -637,7 +637,7 @@
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pictureBox12.Image = global::Genshin_Impact_Mod.Properties.Resources.paimon_3;
-            this.pictureBox12.Location = new System.Drawing.Point(978, 461);
+            this.pictureBox12.Location = new System.Drawing.Point(978, 462);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(42, 42);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -650,7 +650,7 @@
             this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.progressBar1.Location = new System.Drawing.Point(12, 544);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(777, 23);
+            this.progressBar1.Size = new System.Drawing.Size(766, 23);
             this.progressBar1.TabIndex = 114;
             this.progressBar1.Visible = false;
             // 
@@ -679,10 +679,10 @@
             this.linkLabel8.LinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel8.Location = new System.Drawing.Point(538, 83);
             this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(99, 21);
+            this.linkLabel8.Size = new System.Drawing.Size(149, 21);
             this.linkLabel8.TabIndex = 89;
             this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "Beta release";
+            this.linkLabel8.Text = ">> Beta release <<";
             this.linkLabel8.Click += new System.EventHandler(this.Beta_Click);
             // 
             // Default

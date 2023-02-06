@@ -68,7 +68,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 		private async void SkiffyApi(string url)
 		{
 			string json = await GetData(url);
-			SefinekApi res = JsonConvert.DeserializeObject<SefinekApi>(json);
+			SkiffyBotApi res = JsonConvert.DeserializeObject<SkiffyBotApi>(json);
 
 			webView21.CoreWebView2.Navigate(res.Message);
 			text_Label.Visible = false;

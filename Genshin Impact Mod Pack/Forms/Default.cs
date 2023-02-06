@@ -115,7 +115,7 @@ namespace Genshin_Impact_Mod.Forms
 				WebClient client = new WebClient();
 				client.Headers.Add("user-agent", Program.UserAgent);
 				string json = await client.DownloadStringTaskAsync("https://api.sefinek.net/api/v1/genshin-impact-reshade/launcher/version");
-				LauncherApi res = JsonConvert.DeserializeObject<LauncherApi>(json);
+				ModApi res = JsonConvert.DeserializeObject<ModApi>(json);
 
 				if (res.Version[0] != Program.AppVersion[0])
 				{
@@ -280,13 +280,13 @@ namespace Genshin_Impact_Mod.Forms
 			MessageBox.Show(@"ฅ^˙Ⱉ˙^ฅ rawr!", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
-		private void AnimeGirl3_DoubleClick(object sender, EventArgs e)
+		private async void AnimeGirl3_DoubleClick(object sender, EventArgs e)
 		{
 			MessageBox.Show(@"(^=_=^)", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 			WebClient client = new WebClient();
 			client.Headers.Add("user-agent", Program.UserAgent);
-			string json = client.DownloadString("https://api.alexflipnote.dev/sadcat");
+			string json = await client.DownloadStringTaskAsync("https://api.alexflipnote.dev/sadcat");
 			AlexflipnoteApi res = JsonConvert.DeserializeObject<AlexflipnoteApi>(json);
 
 			Process.Start(res.File);
@@ -325,7 +325,14 @@ namespace Genshin_Impact_Mod.Forms
 
 		private async void OpenGILauncher_Click(object sender, EventArgs e)
 		{
-			string gamePath = File.ReadAllLines($@"{Program.AppData}\game-path.sfn").First();
+			string gamePathFilename = $@"{Program.AppData}\game-path.sfn";
+			if (!File.Exists(gamePathFilename))
+			{
+				MessageBox.Show($"File with game path was not found in:\n{gamePathFilename}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+
+			string gamePath = File.ReadAllLines(gamePathFilename).First();
 			string gameDir = Directory.GetParent(gamePath)?.FullName;
 			string mainDir = Directory.GetParent(gameDir)?.FullName;
 
@@ -344,9 +351,9 @@ namespace Genshin_Impact_Mod.Forms
 			Process.Start("https://www.patreon.com/sefinek");
 		}
 
-		private void KoFi_Click(object sender, EventArgs e)
+		private void SupportMe_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://ko-fi.com/sefinek");
+			Process.Start("https://sefinek.net/support-me");
 		}
 
 		private void Discord_Button(object sender, EventArgs e)

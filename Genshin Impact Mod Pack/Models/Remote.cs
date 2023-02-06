@@ -2,14 +2,14 @@
 
 namespace Genshin_Impact_Mod.Models
 {
-	public class LauncherApi
+	public class ModApi
 	{
 		public string Version { get; set; }
 		public string Date { get; set; }
 	}
 
 	// Random images
-	public class SefinekApi
+	public class SkiffyBotApi
 	{
 		public string Message { get; set; }
 	}

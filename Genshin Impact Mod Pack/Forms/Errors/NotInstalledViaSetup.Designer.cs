@@ -46,9 +46,9 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(568, 61);
             this.label1.TabIndex = 0;
-            this.label1.Text = "This program is not installed using our installation wizard. Make sure you have i" +
-    "nstalled all required dependencies. Good luck!\r\nIf you need help add me on Disco" +
-    "rd: Sefinek#0001";
+            this.label1.Text = "This program is not installed using our installation wizard.\r\nMake sure you have " +
+    "installed all required dependencies. Good luck!\r\nIf you need help add me on Disc" +
+    "ord: Sefinek#0001";
             // 
             // label2
             // 
