@@ -470,7 +470,7 @@ namespace Genshin_Impact_Mod.Forms
 			label3.Text = "✖ Bruh. Operation was canceled.";
 
 			updates_Label.LinkColor = Color.Red;
-			updates_Label.Text = @"Aborted - try again";
+			updates_Label.Text = "Aborted - try again";
 			updates_Label.Click += CheckUpdates_Click;
 		}
 
@@ -486,8 +486,8 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Paimon_Click(object sender, EventArgs e)
 		{
-			RandomImg frm = new RandomImg { Location = Location, Icon = Resources.icon_52x52 };
-			if (Application.OpenForms.OfType<RandomImg>().Count() == 1) Application.OpenForms.OfType<RandomImg>().First().Close();
+			RandomThings frm = new RandomThings { Location = Location, Icon = Resources.icon_52x52 };
+			if (Application.OpenForms.OfType<RandomThings>().Count() == 1) Application.OpenForms.OfType<RandomThings>().First().Close();
 			frm.Show();
 		}
 

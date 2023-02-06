@@ -1,6 +1,6 @@
 ﻿namespace Genshin_Impact_Mod.Forms.Other
 {
-    partial class RandomImg
+    partial class RandomThings
     {
         /// <summary>
         /// Required designer variable.
@@ -77,6 +77,8 @@
             this.linkLabel43 = new System.Windows.Forms.LinkLabel();
             this.linkLabel44 = new System.Windows.Forms.LinkLabel();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.label4 = new System.Windows.Forms.Label();
+            this.linkLabel45 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
@@ -942,6 +944,37 @@
             this.webView21.TabIndex = 49;
             this.webView21.ZoomFactor = 1D;
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.Location = new System.Drawing.Point(1126, 555);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(341, 38);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "» Random YouTube videos";
+            // 
+            // linkLabel45
+            // 
+            this.linkLabel45.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.linkLabel45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel45.AutoSize = true;
+            this.linkLabel45.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel45.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel45.ForeColor = System.Drawing.Color.Transparent;
+            this.linkLabel45.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel45.LinkColor = System.Drawing.Color.White;
+            this.linkLabel45.Location = new System.Drawing.Point(1137, 605);
+            this.linkLabel45.Name = "linkLabel45";
+            this.linkLabel45.Size = new System.Drawing.Size(71, 25);
+            this.linkLabel45.TabIndex = 51;
+            this.linkLabel45.TabStop = true;
+            this.linkLabel45.Text = "HL cat";
+            this.linkLabel45.Click += new System.EventHandler(this.HlCat_Click);
+            // 
             // RandomImg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -950,6 +983,8 @@
             this.BackgroundImage = global::Genshin_Impact_Mod.Properties.Resources.random_images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1576, 816);
+            this.Controls.Add(this.linkLabel45);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.linkLabel44);
             this.Controls.Add(this.linkLabel43);
@@ -1063,5 +1098,7 @@
         private System.Windows.Forms.LinkLabel linkLabel43;
         private System.Windows.Forms.LinkLabel linkLabel44;
 		private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.LinkLabel linkLabel45;
 	}
 }

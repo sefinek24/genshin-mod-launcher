@@ -105,11 +105,11 @@
     <Compile Include="Forms\Errors\NotInstalledViaSetup.Designer.cs">
       <DependentUpon>NotInstalledViaSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Other\RandomImg.cs">
+    <Compile Include="Forms\Other\RandomThings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Other\RandomImg.Designer.cs">
-      <DependentUpon>RandomImg.cs</DependentUpon>
+    <Compile Include="Forms\Other\RandomThings.Designer.cs">
+      <DependentUpon>RandomThings.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Other\SupportMe.cs">
       <SubType>Form</SubType>
@@ -165,8 +165,8 @@
     <EmbeddedResource Include="Forms\Errors\NotInstalledViaSetup.resx">
       <DependentUpon>NotInstalledViaSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Other\RandomImg.resx">
-      <DependentUpon>RandomImg.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Other\RandomThings.resx">
+      <DependentUpon>RandomThings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Other\SupportMe.resx">
       <DependentUpon>SupportMe.cs</DependentUpon>

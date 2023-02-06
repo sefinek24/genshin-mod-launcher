@@ -14,11 +14,11 @@ using Newtonsoft.Json;
 
 namespace Genshin_Impact_Mod.Forms.Other
 {
-	public partial class RandomImg : Form
+	public partial class RandomThings : Form
 	{
 		private string _sourceUrl;
 
-		public RandomImg()
+		public RandomThings()
 		{
 			InitializeComponent();
 
@@ -65,7 +65,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 			}
 		}
 
-		private async void SefinekApi(string url)
+		private async void SkiffyApi(string url)
 		{
 			string json = await GetData(url);
 			SefinekApi res = JsonConvert.DeserializeObject<SefinekApi>(json);
@@ -126,21 +126,23 @@ namespace Genshin_Impact_Mod.Forms.Other
 			_sourceUrl = res.Message;
 		}
 
+		/* Random animals */
 		private void RandomCat_Click(object sender, EventArgs e)
 		{
-			SefinekApi("https://api.sefinek.net/api/v1/animals/cat");
+			SkiffyApi("https://api.sefinek.net/api/v1/animals/cat");
 		}
 
 		private void RandomDog_Click(object sender, EventArgs e)
 		{
-			SefinekApi("https://api.sefinek.net/api/v1/animals/dog");
+			SkiffyApi("https://api.sefinek.net/api/v1/animals/dog");
 		}
 
 		private void RandomFox_Click(object sender, EventArgs e)
 		{
-			SefinekApi("https://api.sefinek.net/api/v1/animals/fox");
+			SkiffyApi("https://api.sefinek.net/api/v1/animals/fox");
 		}
 
+		/* Random anime bitches */
 		private void CatGirl_Click(object sender, EventArgs e)
 		{
 			NekosBest("https://nekos.best/api/v2/neko", false);
@@ -156,16 +158,27 @@ namespace Genshin_Impact_Mod.Forms.Other
 			NekosBest("https://nekos.best/api/v2/waifu", false);
 		}
 
-		private void Senko_Click(object sender, EventArgs e)
-		{
-			PurrBot("https://purrbot.site/api/img/sfw/senko/img");
-		}
-
 		private void Coffee_Click(object sender, EventArgs e)
 		{
 			NekoBot("https://nekobot.xyz/api/image?type=coffee");
 		}
 
+		private void Shiro_Click(object sender, EventArgs e)
+		{
+			PurrBot("https://purrbot.site/api/img/sfw/shiro/img");
+		}
+
+		private void Holo_Click(object sender, EventArgs e)
+		{
+			PurrBot("https://purrbot.site/api/img/sfw/holo/img");
+		}
+
+		private void Senko_Click(object sender, EventArgs e)
+		{
+			PurrBot("https://purrbot.site/api/img/sfw/senko/img");
+		}
+
+		/* Random anime gifs */
 		private void Hug_Click(object sender, EventArgs e)
 		{
 			NekosBest("https://nekos.best/api/v2/hug", true);
@@ -236,6 +249,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 			NekosBest("https://nekos.best/api/v2/sleep", true);
 		}
 
+		/* Random anime gifs */
 		private void Baka_Click(object sender, EventArgs e)
 		{
 			NekosBest("https://nekos.best/api/v2/baka", true);
@@ -336,16 +350,13 @@ namespace Genshin_Impact_Mod.Forms.Other
 			PurrBot("https://purrbot.site/api/img/sfw/tail/gif");
 		}
 
-		private void Shiro_Click(object sender, EventArgs e)
+		/* Random YouTube videos */
+		private void HlCat_Click(object sender, EventArgs e)
 		{
-			PurrBot("https://purrbot.site/api/img/sfw/shiro/img");
+			SkiffyApi("http://127.0.0.1:4010/api/v2/random/yt-video/hl-cats");
 		}
 
-		private void Holo_Click(object sender, EventArgs e)
-		{
-			PurrBot("https://purrbot.site/api/img/sfw/holo/img");
-		}
-
+		/* Footer */
 		private void Source_Click(object sender, EventArgs e)
 		{
 			if (!string.IsNullOrEmpty(_sourceUrl)) Process.Start(_sourceUrl);
