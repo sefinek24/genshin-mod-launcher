@@ -193,7 +193,7 @@ namespace Genshin_Impact_Mod.Forms
 			{
 				updates_Label.LinkColor = Color.Red;
 				updates_Label.Text = @"Ohh, something went wrong";
-				status_Label.Text = $"[✖] {e.Message}";
+				status_Label.Text += $"[✖] {e.Message}\n";
 
 				Log.ErrorAuditLog(new Exception($"Something went wrong while checking for new updates.\n\n{e}"));
 				Log.Output(e.Message);

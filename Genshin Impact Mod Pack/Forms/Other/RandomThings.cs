@@ -44,7 +44,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 			}
 
 			DiscordRpcClient client = Discord.Client;
-			Discord.Presence.State = "Random images page 😻";
+			Discord.Presence.State = "Watching random things 😻";
 			client.SetPresence(Discord.Presence);
 
 			Log.Output($"Loaded form '{Text}'.");
@@ -58,9 +58,15 @@ namespace Genshin_Impact_Mod.Forms.Other
 				client.Headers.Add("user-agent", Program.UserAgent);
 				return await client.DownloadStringTaskAsync(url);
 			}
-			catch (Exception e)
+			catch (WebException e)
 			{
-				MessageBox.Show(e.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				if (e.Status == WebExceptionStatus.ProtocolError && e.Response is HttpWebResponse response)
+					MessageBox.Show(e.Message, Program.AppName, MessageBoxButtons.OK, (int)response.StatusCode >= 500 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
+				else
+					MessageBox.Show(e.Message, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+				Log.Output($"Received error from API: {url}");
+				Log.ErrorAuditLog(new Exception($"Error with API: {url}\n\n{e}"));
 				return null;
 			}
 		}
@@ -68,15 +74,21 @@ namespace Genshin_Impact_Mod.Forms.Other
 		private async void SkiffyApi(string url)
 		{
 			string json = await GetData(url);
+			if (json == null) return;
+
 			SkiffyBotApi res = JsonConvert.DeserializeObject<SkiffyBotApi>(json);
 
 			webView21.CoreWebView2.Navigate(res.Message);
 			text_Label.Visible = false;
+
+			Log.Output($"Received data from api.sefinek.net: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
 		}
 
 		private async void NekosBest(string url, bool gif)
 		{
 			string json = await GetData(url);
+			if (json == null) return;
+
 			NekosBest res = JsonConvert.DeserializeObject<NekosBest>(json);
 
 			webView21.CoreWebView2.Navigate(res.Results.FirstOrDefault()?.Url);
@@ -96,16 +108,22 @@ namespace Genshin_Impact_Mod.Forms.Other
 
 			text_Label.Visible = true;
 			_sourceUrl = res.Results.FirstOrDefault()?.Source_url;
+
+			Log.Output($"Received data from nekos.best: {res.Results.FirstOrDefault()?.Anime_name} {res.Results.FirstOrDefault()?.Source_url} {res.Results.FirstOrDefault()?.Url}");
 		}
 
 		private async void PurrBot(string url)
 		{
 			string json = await GetData(url);
+			if (json == null) return;
+
 			PurrBot res = JsonConvert.DeserializeObject<PurrBot>(json);
 
 			webView21.CoreWebView2.Navigate(res.Link);
 			_sourceUrl = res.Link;
 			text_Label.Visible = false;
+
+			Log.Output($"Received data from purrbot.site: {res.Link}");
 		}
 
 		private async void NekoBot(string url)
@@ -124,22 +142,24 @@ namespace Genshin_Impact_Mod.Forms.Other
 
 			text_Label.Visible = true;
 			_sourceUrl = res.Message;
+
+			Log.Output($"Received data from nekobot.xyz: {res.Color} {rgbColor} {res.Message}");
 		}
 
 		/* Random animals */
 		private void RandomCat_Click(object sender, EventArgs e)
 		{
-			SkiffyApi("https://api.sefinek.net/api/v1/animals/cat");
+			SkiffyApi("https://api.sefinek.net/api/v2/random/animal/cat");
 		}
 
 		private void RandomDog_Click(object sender, EventArgs e)
 		{
-			SkiffyApi("https://api.sefinek.net/api/v1/animals/dog");
+			SkiffyApi("https://api.sefinek.net/api/v2/random/animal/dog");
 		}
 
 		private void RandomFox_Click(object sender, EventArgs e)
 		{
-			SkiffyApi("https://api.sefinek.net/api/v1/animals/fox");
+			SkiffyApi("https://api.sefinek.net/api/v2/random/animal/fox");
 		}
 
 		/* Random anime bitches */
@@ -353,7 +373,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 		/* Random YouTube videos */
 		private void HlCat_Click(object sender, EventArgs e)
 		{
-			SkiffyApi("http://127.0.0.1:4010/api/v2/random/yt-video/hl-cats");
+			SkiffyApi("https://api.sefinek.net/api/v2/random/yt-video/hl-cats");
 		}
 
 		/* Footer */

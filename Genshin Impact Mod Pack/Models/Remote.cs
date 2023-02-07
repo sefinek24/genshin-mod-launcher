@@ -11,6 +11,10 @@ namespace Genshin_Impact_Mod.Models
 	// Random images
 	public class SkiffyBotApi
 	{
+		public string Success { get; set; }
+		public string Status { get; set; }
+		public string Category { get; set; }
+		public string Endpoint { get; set; }
 		public string Message { get; set; }
 	}
 
