@@ -114,7 +114,7 @@ namespace Genshin_Impact_Mod.Forms
 			{
 				WebClient client = new WebClient();
 				client.Headers.Add("user-agent", Program.UserAgent);
-				string json = await client.DownloadStringTaskAsync("https://api.sefinek.net/api/v1/genshin-impact-reshade/launcher/version");
+				string json = await client.DownloadStringTaskAsync("https://api.sefinek.net/api/v2/genshin-impact-reshade/launcher/version");
 				ModApi res = JsonConvert.DeserializeObject<ModApi>(json);
 
 				if (res.Version[0] != Program.AppVersion[0])
