@@ -230,7 +230,7 @@ namespace Genshin_Impact_Mod.Forms
 					string fpsUnlockerCfg = File.ReadAllText(Program.UnlockerFpsPath);
 					File.WriteAllText(Program.UnlockerFpsPath, fpsUnlockerCfg.Replace("{GamePath}", @"C:\\Program Files\\Genshin Impact\\Genshin Impact game\\GenshinImpact.exe"));
 
-					status_Label.Text += "[✔] Success!\n";
+					status_Label.Text += "[✓] Success!\n";
 					Log.Output("Done.");
 				}
 				catch (Exception ex)
