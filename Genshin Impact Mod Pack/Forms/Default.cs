@@ -17,6 +17,7 @@ using Genshin_Impact_Mod.Models;
 using Genshin_Impact_Mod.Properties;
 using Genshin_Impact_Mod.Scripts;
 using Microsoft.Toolkit.Uwp.Notifications;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
 
 // 1 = ReShade + FPS Unlocker
@@ -102,10 +103,13 @@ namespace Genshin_Impact_Mod.Forms
 		private void Exit_Click(object sender, EventArgs e)
 		{
 			Close();
+			Log.Output($"Closed form '{Text}'.");
 		}
 
 		private async Task<int> CheckUpdates()
 		{
+			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
+
 			updates_Label.LinkColor = Color.White;
 			updates_Label.Text = @"Checking for updates...";
 			Log.Output("Checking for new versions...");
@@ -128,6 +132,7 @@ namespace Genshin_Impact_Mod.Forms
 					Log.Output($"New major version is available: v{Program.AppVersion} → v{res.Version} ({res.Date})");
 
 					UpdateIsAvailable = true;
+					TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
 					new NotCompatible { Icon = Resources.icon_52x52 }.ShowDialog();
 
 					Environment.Exit(0);
@@ -157,8 +162,7 @@ namespace Genshin_Impact_Mod.Forms
 
 					try
 					{
-						ToastContentBuilder builder = new ToastContentBuilder().AddText("📥 We found new updates").AddText("New version is available.");
-						builder.Show();
+						new ToastContentBuilder().AddText("📥 We found new updates").AddText("New version is available.").Show();
 					}
 					catch (Exception e)
 					{
@@ -170,7 +174,7 @@ namespace Genshin_Impact_Mod.Forms
 					// Hide and show elements
 					progressBar1.Hide();
 					label3.Hide();
-					label3.Text = "Preparning... If process is stuck, reopen launcher.";
+					label3.Text = "🍰 Preparning... If process is stuck, reopen launcher.";
 					pictureBox3.Show();
 					settings_Label.Show();
 					pictureBox6.Show();
@@ -180,6 +184,8 @@ namespace Genshin_Impact_Mod.Forms
 					pictureBox4.Show();
 					website_Label.Show();
 					progressBar1.Value = 0;
+
+					TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
 					return 1;
 				}
 
@@ -187,6 +193,7 @@ namespace Genshin_Impact_Mod.Forms
 				update_Icon.Image = Resources.icons8_available_updates;
 
 				Log.Output($"Not found any new updates. Your installed version: v{Program.AppVersion}");
+				TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
 				return 0;
 			}
 			catch (Exception e)
@@ -254,8 +261,7 @@ namespace Genshin_Impact_Mod.Forms
 			// Music
 			try
 			{
-				SoundPlayer player = new SoundPlayer { SoundLocation = @"Data\music.wav" };
-				player.Play();
+				new SoundPlayer { SoundLocation = @"Data\music.wav" }.Play();
 			}
 			catch (Exception e2)
 			{
@@ -310,7 +316,12 @@ namespace Genshin_Impact_Mod.Forms
 				await sw.WriteAsync("2");
 			}
 
-			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\start.cmd", null, true, false, false);
+
+			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\start.cmd", null, false, false, false);
+
+			string path = GetGame.Find("giLauncher");
+			if (path == null) return;
+			await Cmd.Execute(path, null, null, true, false, false);
 		}
 
 		private async void OnlyUnlocker_Click(object sender, EventArgs e)
@@ -325,24 +336,10 @@ namespace Genshin_Impact_Mod.Forms
 
 		private async void OpenGILauncher_Click(object sender, EventArgs e)
 		{
-			string gamePathFilename = $@"{Program.AppData}\game-path.sfn";
-			if (!File.Exists(gamePathFilename))
-			{
-				MessageBox.Show($"File with game path was not found in:\n{gamePathFilename}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				return;
-			}
+			string path = GetGame.Find("giLauncher");
+			if (path == null) return;
 
-			string gamePath = File.ReadAllLines(gamePathFilename).First();
-			string gameDir = Directory.GetParent(gamePath)?.FullName;
-			string mainDir = Directory.GetParent(gameDir)?.FullName;
-
-			if (!Directory.Exists(mainDir) || !File.Exists($@"{mainDir}\launcher.exe"))
-			{
-				MessageBox.Show($"Your game was not found in {mainDir}.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				return;
-			}
-
-			await Cmd.Execute($@"{mainDir}\launcher.exe", null, null, false, true, false);
+			await Cmd.Execute(path, null, null, false, true, false);
 		}
 
 		// ------- Footer -------
@@ -460,11 +457,14 @@ namespace Genshin_Impact_Mod.Forms
 		{
 			BeginInvoke((MethodInvoker)delegate
 			{
-				label3.Text = $"Downloading... {ByteSize.FromBytes(e.BytesReceived).MegaBytes:00.00} MB of {ByteSize.FromBytes(e.TotalBytesToReceive).MegaBytes:000.00} MB";
-
 				double bytesIn = double.Parse(e.BytesReceived.ToString());
 				double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
-				progressBar1.Value = int.Parse(Math.Truncate(bytesIn / totalBytes * 100).ToString(CultureInfo.InvariantCulture));
+
+				int data = int.Parse(Math.Truncate(bytesIn / totalBytes * 100).ToString(CultureInfo.InvariantCulture));
+				progressBar1.Value = data;
+				TaskbarManager.Instance.SetProgressValue(data, 100);
+
+				label3.Text = $"📥 Downloading... {ByteSize.FromBytes(e.BytesReceived).MegaBytes:00.00} MB of {ByteSize.FromBytes(e.TotalBytesToReceive).MegaBytes:000.00} MB";
 			});
 		}
 
@@ -472,11 +472,13 @@ namespace Genshin_Impact_Mod.Forms
 		{
 			if (!Directory.Exists($@"{Log.Folder}\updates")) Directory.CreateDirectory($@"{Log.Folder}\updates");
 
+			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
 			string date = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
 			await Cmd.Execute(SetupPathExe, $"/NORESTART /LOG=\"{Log.Folder}\\updates\\{date}.log\"", null, false, true, true);
+			TaskbarManager.Instance.SetProgressValue(100, 100);
+			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
 
 			label3.Text = "✖ Bruh. Operation was canceled.";
-
 			updates_Label.LinkColor = Color.Red;
 			updates_Label.Text = "Aborted - try again";
 			updates_Label.Click += CheckUpdates_Click;

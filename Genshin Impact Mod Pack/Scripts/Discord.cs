@@ -50,16 +50,6 @@ namespace Genshin_Impact_Mod.Scripts
 			await client.SendToDiscord(message);
 		}
 
-		public static async void SupportMe_Form()
-		{
-			DiscordWebhookClient client = new DiscordWebhookClient(Config.WebHookUrlDefault);
-			DiscordMessage message = new DiscordMessage(embeds: new[]
-			{
-				new DiscordMessageEmbed(color: 1492492, author: new DiscordMessageEmbedAuthor($"✅ {Os.Region}: Form Support me - v{Program.AppVersion}"), footer: new DiscordMessageEmbedFooter($"📅 {DateTime.Now:HH:mm:ss, dd.MM.yyyy} • {Os.TimeZone}"))
-			});
-			await client.SendToDiscord(message);
-		}
-
 		public static async void SendLogFiles()
 		{
 			Console.ForegroundColor = ConsoleColor.Blue;

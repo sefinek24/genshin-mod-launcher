@@ -25,11 +25,6 @@ namespace Genshin_Impact_Mod.Forms.Other
 			webView21.DefaultBackgroundColor = Color.Transparent;
 		}
 
-		private void RandomImg_FormClosed(object sender, FormClosedEventArgs e)
-		{
-			Discord.Home();
-		}
-
 		private async void RandomImg_Shown(object sender, EventArgs e)
 		{
 			try
@@ -48,6 +43,12 @@ namespace Genshin_Impact_Mod.Forms.Other
 			client.SetPresence(Discord.Presence);
 
 			Log.Output($"Loaded form '{Text}'.");
+		}
+
+		private void RandomImg_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Log.Output($"Closed form '{Text}'.");
+			Discord.Home();
 		}
 
 		private static async Task<string> GetData(string url)

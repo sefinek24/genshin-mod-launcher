@@ -12,19 +12,29 @@ namespace Genshin_Impact_Mod.Forms.Errors
 			InitializeComponent();
 		}
 
+		private void ErrorOccurred_Shown(object sender, EventArgs e)
+		{
+			Log.Output($"Loaded form '{Text}'.");
+		}
+
+		private void ErrorOccurred_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Log.Output($"Closed form '{Text}'.");
+		}
+
 		private void SeeLogs_Button(object sender, EventArgs e)
 		{
 			Process.Start(Log.Folder);
 		}
 
-		private void Installer_Button(object sender, EventArgs e)
+		private void Reinstall_Button(object sender, EventArgs e)
 		{
 			Process.Start(Program.AppWebsite);
 		}
 
 		private void Discord_Button(object sender, EventArgs e)
 		{
-			Process.Start("https://discord.gg/SVcbaRc7gH");
+			Process.Start(Discord.Invitation);
 		}
 
 		private async void SfcScan_Click(object sender, EventArgs e)

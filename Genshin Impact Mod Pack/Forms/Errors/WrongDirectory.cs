@@ -12,9 +12,15 @@ namespace Genshin_Impact_Mod.Forms.Errors
 			InitializeComponent();
 		}
 
-		private void WrongDirectory_Load(object sender, EventArgs e)
+		private void WrongDir_Shown(object sender, EventArgs e)
 		{
+			Log.Output($"Closed form '{Text}'.");
 			Log.ErrorAuditLog(new Exception($"Invalid application path.\n\nYour: {Environment.CurrentDirectory}\nRequired: {Program.Folder}"));
+		}
+
+		private void WrongDir_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Log.Output($"Closed form '{Text}'.");
 		}
 
 		private void Youtube_Button(object sender, EventArgs e)

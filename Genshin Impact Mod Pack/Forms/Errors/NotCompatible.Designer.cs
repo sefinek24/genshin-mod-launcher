@@ -116,6 +116,8 @@
             this.Name = "NotCompatible";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Genshin Impact Mod Pack";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NotCompatible_Closed);
+            this.Shown += new System.EventHandler(this.NotCompatible_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

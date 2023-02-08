@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using CliWrap;
 using CliWrap.Buffered;
 using Genshin_Impact_Mod.Forms;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace Genshin_Impact_Mod.Scripts
 {
@@ -17,7 +18,7 @@ namespace Genshin_Impact_Mod.Scripts
 
 				if (Default.UpdateIsAvailable && !bypassUpdates)
 				{
-					MessageBox.Show("Sorry, update is required.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show("Sorry. Update is required.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 					Log.Output("Failed. Update is required.");
 					return;
 				}
@@ -44,10 +45,41 @@ namespace Genshin_Impact_Mod.Scripts
 					string showError = !string.IsNullOrEmpty(stderr) ? $"\n\n» Error:\n{stderr}" : "";
 					string info = $"{showCommand}{showWorkingDir}{showExitCode}{showError}";
 
-					if (!downloadSetup)
-						Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({app}) returned a non-zero exit code - {result.ExitCode}.\n{info}"));
-					else
-						Log.ErrorAuditLog(new Exception(info));
+					switch (result.ExitCode)
+					{
+						case 3010:
+						{
+							try
+							{
+								ToastContentBuilder builder = new ToastContentBuilder().AddText("Update alert 📄").AddText("Required dependency has been successfully installed, but your computer needs a restart.");
+								builder.Show();
+							}
+							catch (Exception ex)
+							{
+								Log.ErrorAuditLog(ex);
+							}
+
+							MessageBox.Show("The requested operation is successful, but your PC needs reboot.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+							Log.Output($"{app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
+							return;
+						}
+
+						case 5:
+							const string mainInfo = "Software was denied access to a location for the purposes of saving, copying, opening, or loading files.";
+							MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+							Log.ErrorAndExit(new Exception($"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}"));
+							return;
+
+						default:
+						{
+							if (!downloadSetup)
+								Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({app}) returned a non-zero exit code - {result.ExitCode}.\n{info}"));
+							else
+								Log.ErrorAuditLog(new Exception(info));
+
+							return;
+						}
+					}
 				}
 
 				// Exit

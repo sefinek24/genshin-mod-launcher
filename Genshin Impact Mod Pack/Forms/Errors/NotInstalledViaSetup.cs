@@ -14,12 +14,13 @@ namespace Genshin_Impact_Mod.Forms.Errors
 
 		private void NotConfigured_Load(object sender, EventArgs e)
 		{
+			Log.Output($"Loaded form '{Text}'.");
 			Log.ErrorAuditLog(new Exception($"Launcher is not installed using our installation wizard.\n\nApplication data: {Program.AppData}"));
 		}
 
-		private void DependencyList_Click(object sender, EventArgs e)
+		private void NotInstalledViaSetup_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			Process.Start("https://github.com/sefinek24/Genshin-Impact-ReShade#--requirements");
+			Log.Output($"Closed form '{Text}'.");
 		}
 
 		private void Installer_Button(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace Genshin_Impact_Mod.Forms.Errors
 
 		private void Discord_Button(object sender, EventArgs e)
 		{
-			Process.Start("https://discord.gg/SVcbaRc7gH");
+			Process.Start(Discord.Invitation);
 		}
 	}
 }

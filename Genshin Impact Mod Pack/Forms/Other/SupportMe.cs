@@ -38,8 +38,6 @@ namespace Genshin_Impact_Mod.Forms.Other
 		private void SupportMe_Shown(object sender, EventArgs e)
 		{
 			Log.Output($"Loaded form '{Text}'.");
-
-			Discord.SupportMe_Form();
 		}
 
 		private void Exit_Click(object sender, EventArgs e)

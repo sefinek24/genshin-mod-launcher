@@ -108,7 +108,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_animated;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(21, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +125,7 @@
             this.linkLabel3.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel3.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel3.Location = new System.Drawing.Point(37, 14);
+            this.linkLabel3.Location = new System.Drawing.Point(37, 15);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(135, 15);
             this.linkLabel3.TabIndex = 88;
@@ -418,10 +418,10 @@
             this.version_Label.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.version_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.version_Label.LinkColor = System.Drawing.Color.White;
-            this.version_Label.Location = new System.Drawing.Point(784, 517);
+            this.version_Label.Location = new System.Drawing.Point(820, 517);
             this.version_Label.Name = "version_Label";
             this.version_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.version_Label.Size = new System.Drawing.Size(207, 23);
+            this.version_Label.Size = new System.Drawing.Size(171, 23);
             this.version_Label.TabIndex = 85;
             this.version_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip1.SetToolTip(this.version_Label, "See changelog on GitHub.");
@@ -660,9 +660,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Liberation Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(172, 520);
+            this.label3.Location = new System.Drawing.Point(149, 520);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(503, 20);
+            this.label3.Size = new System.Drawing.Size(526, 20);
             this.label3.TabIndex = 115;
             this.label3.Text = "Preparing...";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

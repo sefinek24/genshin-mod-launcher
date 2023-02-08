@@ -97,7 +97,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Reinstall software";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Installer_Button);
+            this.button1.Click += new System.EventHandler(this.Reinstall_Button);
             // 
             // pictureBox1
             // 
@@ -141,6 +141,8 @@
             this.Name = "ErrorOccurred";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Genshin Impact Mod Pack";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ErrorOccurred_FormClosed);
+            this.Shown += new System.EventHandler(this.ErrorOccurred_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

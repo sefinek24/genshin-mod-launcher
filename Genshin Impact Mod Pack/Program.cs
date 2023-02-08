@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -30,7 +31,7 @@ namespace Genshin_Impact_Mod
 		private static readonly string TierActivated = AppData + @"\tier-activated.sfn";
 
 		// Other
-		public static readonly string UserAgent = $"Mozilla/5.0 (compatible; GenshinModLauncher/{AppVersion}; +{AppWebsite})";
+		public static readonly string UserAgent = $"Mozilla/5.0 (compatible; GenshinModLauncher/{AppVersion}; +https://genshin.sefinek.net)";
 		public static int LaunchCountGlobal;
 
 		[STAThread]
@@ -40,6 +41,13 @@ namespace Genshin_Impact_Mod
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
+
+			if (RegionInfo.CurrentRegion.Name == "RU")
+			{
+				new WrongCountry { Icon = Resources.icon_52x52 }.ShowDialog();
+
+				Environment.Exit(0);
+			}
 
 			if ((Environment.CurrentDirectory != Folder) & !Debugger.IsAttached)
 			{
@@ -52,7 +60,7 @@ namespace Genshin_Impact_Mod
 			{
 				new NotInstalledViaSetup { Icon = Resources.icon_52x52 }.ShowDialog();
 
-				File.Create(InstalledViaSetup);
+				Environment.Exit(0);
 			}
 
 			if (Process.GetProcessesByName(Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly()?.Location)).Count() > 1)
@@ -109,9 +117,8 @@ namespace Genshin_Impact_Mod
 						Application.Run(new SupportMe { Icon = Resources.icon_52x52 });
 						return;
 
-					case 8:
-					case 25:
-					case 35:
+					case 26:
+					case 38:
 					case 60:
 					case 100:
 					case 200:

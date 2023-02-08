@@ -12,9 +12,6 @@ namespace Genshin_Impact_Mod.Forms
 {
 	public partial class Tools : Form
 	{
-		// public static readonly string TelemetryFile = Program.AppData + @"\telemetry.sfn";
-		// public static readonly string ErrorReportingFile = Program.AppData + @"\error-reporting.sfn";
-
 		private bool _mouseDown;
 		private Point _offset;
 
@@ -45,6 +42,8 @@ namespace Genshin_Impact_Mod.Forms
 		private void Exit_Click(object sender, EventArgs e)
 		{
 			Close();
+			Log.Output($"Closed form '{Text}'.");
+
 			Discord.Home();
 		}
 

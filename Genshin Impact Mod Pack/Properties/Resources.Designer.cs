@@ -253,6 +253,16 @@ namespace Genshin_Impact_Mod.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_20220810_133130_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_20220810_133130-1-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap klee_wrong_dir {
             get {
                 object obj = ResourceManager.GetObject("klee_wrong-dir", resourceCulture);

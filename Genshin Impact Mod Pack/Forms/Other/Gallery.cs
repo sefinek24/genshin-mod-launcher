@@ -34,6 +34,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 
 		private void Gallery_FormClosed(object sender, FormClosedEventArgs e)
 		{
+			Log.Output($"Closed form '{Text}'.");
 			Discord.Home();
 		}
 	}

@@ -114,7 +114,8 @@
             this.Name = "WrongDirectory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Genshin Impact Mod Pack";
-            this.Load += new System.EventHandler(this.WrongDirectory_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WrongDir_FormClosed);
+            this.Shown += new System.EventHandler(this.WrongDir_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

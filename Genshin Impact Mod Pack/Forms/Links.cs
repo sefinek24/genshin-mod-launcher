@@ -39,6 +39,8 @@ namespace Genshin_Impact_Mod.Forms
 		private void Exit_Click(object sender, EventArgs e)
 		{
 			Close();
+			Log.Output($"Closed form '{Text}'.");
+
 			Discord.Home();
 		}
 
