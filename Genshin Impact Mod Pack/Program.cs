@@ -37,6 +37,7 @@ namespace Genshin_Impact_Mod
 		[STAThread]
 		private static void Main()
 		{
+			Log.Output($"Debugger is attached: {Debugger.IsAttached}");
 			Log.Output("Opening launcher...");
 
 			Application.EnableVisualStyles();
