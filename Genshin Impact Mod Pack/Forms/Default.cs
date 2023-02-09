@@ -474,7 +474,7 @@ namespace Genshin_Impact_Mod.Forms
 
 			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate);
 			string date = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
-			await Cmd.Execute(SetupPathExe, $"/NORESTART /LOG=\"{Log.Folder}\\updates\\{date}.log\"", null, false, true, true);
+			await Cmd.Execute(SetupPathExe, $"/UPDATE /NORESTART /LOG=\"{Log.Folder}\\updates\\{date}.log\"", null, false, true, true);
 			TaskbarManager.Instance.SetProgressValue(100, 100);
 			TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
 
