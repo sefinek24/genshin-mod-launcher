@@ -52,7 +52,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 			MessageBox.Show("Thanks :3", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 			Log.Output($"Clicked yes in form '{Text}'.");
-			Discord.SupportMe_Form_Yes();
+			WebHook.SupportMe_AnswYes();
 		}
 
 		private void NotThisTime_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 			new Default { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 }.Show();
 
 			Log.Output($"Clicked no in form '{Text}'.");
-			Discord.SupportMe_Form_No();
+			WebHook.SupportMe_AnswNo();
 		}
 	}
 }

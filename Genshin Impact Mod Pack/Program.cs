@@ -127,7 +127,7 @@ namespace Genshin_Impact_Mod
 
 						if (logFilesResult == DialogResult.Yes)
 						{
-							Discord.SendLogFiles();
+							WebHook.SendLogFiles();
 
 							DialogResult showFilesResult = MessageBox.Show("Thank you! Do you want to see these files?", AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 							if (showFilesResult == DialogResult.Yes)

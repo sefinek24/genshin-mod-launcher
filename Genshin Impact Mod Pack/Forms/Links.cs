@@ -38,8 +38,8 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Exit_Click(object sender, EventArgs e)
 		{
-			Close();
 			Log.Output($"Closed form '{Text}'.");
+			Close();
 
 			Discord.Home();
 		}
@@ -55,37 +55,37 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void TIMap_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://act.hoyolab.com/ys/app/interactive-map/index.html");
+			Open.InBrowser("https://act.hoyolab.com/ys/app/interactive-map/index.html");
 		}
 
 		private void GIInterWorldMap_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://genshin-impact-map.appsample.com");
+			Open.InBrowser("https://genshin-impact-map.appsample.com");
 		}
 
 		private void GIBTierList_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://genshin.gg/tier-list");
+			Open.InBrowser("https://genshin.gg/tier-list");
 		}
 
 		private void TLBCHD_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://game8.co/games/Genshin-Impact/archives/297465");
+			Open.InBrowser("https://game8.co/games/Genshin-Impact/archives/297465");
 		}
 
 		private void Uptimerobot_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://stats.uptimerobot.com/kLXYEukEwW");
+			Open.InBrowser("https://stats.uptimerobot.com/kLXYEukEwW");
 		}
 
 		private void Api_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://api.sefinek.net");
+			Open.InBrowser("https://api.sefinek.net");
 		}
 
 		private void Cdn_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://cdn.sefinek.net");
+			Open.InBrowser("https://cdn.sefinek.net");
 		}
 	}
 }

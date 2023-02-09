@@ -42,8 +42,8 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Exit_Click(object sender, EventArgs e)
 		{
-			Close();
 			Log.Output($"Closed form '{Text}'.");
+			Close();
 
 			Discord.Home();
 		}
@@ -71,7 +71,7 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void ViewInBrowser_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://www.youtube.com/watch?v=rDeO26RapAk");
+			Open.InBrowser("https://www.youtube.com/watch?v=rDeO26RapAk");
 		}
 
 		private void Gallery_Button(object sender, EventArgs e)
@@ -83,12 +83,12 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Discord_Button(object sender, EventArgs e)
 		{
-			Process.Start("https://discord.gg/SVcbaRc7gH");
+			Open.InBrowser(Discord.Invitation);
 		}
 
 		private void Website_Button(object sender, EventArgs e)
 		{
-			Process.Start(Program.AppWebsite);
+			Open.InBrowser(Program.AppWebsite);
 		}
 	}
 }

@@ -94,16 +94,28 @@ namespace Genshin_Impact_Mod.Forms
 				default:
 					BackgroundImage = new Bitmap(Resources.kokomi_1);
 					_bgInt = 0;
+					Log.Output($"Changed app background to default. ID: {_bgInt}");
 					return;
 			}
 
-			BackgroundImage = new Bitmap($@"{Program.Folder}\Screenshots\Default\Backgrounds\{fileName}.png");
+			string path = $@"{Program.Folder}\Screenshots\Default\Backgrounds\{fileName}.png";
+			BackgroundImage = new Bitmap(path);
+			Log.Output($"Changed app background to '{path}'. ID: {_bgInt}");
 		}
 
 		private void Exit_Click(object sender, EventArgs e)
 		{
 			Close();
-			Log.Output($"Closed form '{Text}'.");
+		}
+
+		private void Default_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Log.Output($"Closing form '{Text}'.");
+		}
+
+		private void Default_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Log.Output("Closed.");
 		}
 
 		private async Task<int> CheckUpdates()
@@ -200,7 +212,7 @@ namespace Genshin_Impact_Mod.Forms
 			{
 				updates_Label.LinkColor = Color.Red;
 				updates_Label.Text = @"Ohh, something went wrong";
-				status_Label.Text += $"[✖] {e.Message}\n";
+				status_Label.Text += $"[x] {e.Message}\n";
 
 				Log.ErrorAuditLog(new Exception($"Something went wrong while checking for new updates.\n\n{e}"));
 				Log.Output(e.Message);
@@ -256,7 +268,7 @@ namespace Genshin_Impact_Mod.Forms
 			Discord.RunRpc();
 
 			if (Debugger.IsAttached) return;
-			Discord.WebHook_Opened(Program.LaunchCountGlobal);
+			WebHook.OpenedLauncher(Program.LaunchCountGlobal);
 
 			// Music
 			try
@@ -273,7 +285,7 @@ namespace Genshin_Impact_Mod.Forms
 		// ------- Body -------
 		private void GitHub_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/sefinek24/Genshin-Impact-ReShade");
+			Open.InBrowser("https://github.com/sefinek24/Genshin-Impact-ReShade");
 		}
 
 		private void AnimeGirl1_DoubleClick(object sender, EventArgs e)
@@ -295,7 +307,7 @@ namespace Genshin_Impact_Mod.Forms
 			string json = await client.DownloadStringTaskAsync("https://api.alexflipnote.dev/sadcat");
 			AlexflipnoteApi res = JsonConvert.DeserializeObject<AlexflipnoteApi>(json);
 
-			Process.Start(res.File);
+			Open.InBrowser(res.File);
 		}
 
 		// ------- Start the game -------
@@ -315,7 +327,6 @@ namespace Genshin_Impact_Mod.Forms
 			{
 				await sw.WriteAsync("2");
 			}
-
 
 			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\start.cmd", null, false, false, false);
 
@@ -345,22 +356,22 @@ namespace Genshin_Impact_Mod.Forms
 		// ------- Footer -------
 		private void Patron_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://www.patreon.com/sefinek");
+			Open.InBrowser("https://www.patreon.com/sefinek");
 		}
 
 		private void SupportMe_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://sefinek.net/support-me");
+			Open.InBrowser("https://sefinek.net/support-me");
 		}
 
 		private void Discord_Button(object sender, EventArgs e)
 		{
-			Process.Start(Discord.Invitation);
+			Open.InBrowser(Discord.Invitation);
 		}
 
 		private void YouTube_Button(object sender, EventArgs e)
 		{
-			Process.Start("https://www.youtube.com/@sefinek");
+			Open.InBrowser("https://www.youtube.com/@sefinek");
 		}
 
 		private void Settings_Click(object sender, EventArgs e)
@@ -386,12 +397,12 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Website_Click(object sender, EventArgs e)
 		{
-			Process.Start(Program.AppWebsite);
+			Open.InBrowser(Program.AppWebsite);
 		}
 
 		private void Version_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/CHANGELOG.md");
+			Open.InBrowser("https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/CHANGELOG.md");
 		}
 
 		private async void CheckUpdates_Click(object sender, EventArgs e)
@@ -503,7 +514,7 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Beta_Click(object sender, EventArgs e)
 		{
-			Process.Start("https://www.youtube.com/watch?v=VzdQ6eFWeR0");
+			Open.InBrowser("https://www.youtube.com/watch?v=VzdQ6eFWeR0");
 		}
 	}
 }

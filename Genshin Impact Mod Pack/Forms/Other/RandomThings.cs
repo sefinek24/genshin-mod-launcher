@@ -380,7 +380,7 @@ namespace Genshin_Impact_Mod.Forms.Other
 		/* Footer */
 		private void Source_Click(object sender, EventArgs e)
 		{
-			if (!string.IsNullOrEmpty(_sourceUrl)) Process.Start(_sourceUrl);
+			if (!string.IsNullOrEmpty(_sourceUrl)) Open.InBrowser(_sourceUrl);
 		}
 	}
 }

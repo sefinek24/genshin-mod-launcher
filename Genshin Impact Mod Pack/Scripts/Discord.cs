@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Text;
 using DiscordRPC;
 using DiscordRPC.Logging;
@@ -23,20 +24,38 @@ namespace Genshin_Impact_Mod.Scripts
 			Assets = new Assets
 			{
 				LargeImageKey = "main",
-				LargeImageText = "Better Graphics Quality + FPS Unlocker for Genshin Impact."
+				LargeImageText = "Better graphics quality & FPS unlocker for Genshin Impact."
 			},
 			Timestamps = Timestamps.Now,
 			Buttons = new[]
 			{
-				new Button { Label = "Official website", Url = "https://sefinek.net/genshin-impact-reshade" }
+				new Button { Label = "Official website", Url = Program.AppWebsite }
 			}
 		};
 
-		public static async void WebHook_Opened(int launchCount)
+		public static void RunRpc()
 		{
-			// var telemetryFile = File.ReadAllLines(Tools.TelemetryFile)[0];
-			// if (telemetryFile == "false") return;
+			Client = new DiscordRpcClient(Config.AppId, DiscordPipe) { Logger = new ConsoleLogger(LogLevel, true) };
 
+			Client.Logger = new ConsoleLogger { Level = LogLevel.Warning };
+			Client.OnReady += (sender, msg) => Log.Output($"Connected to Discord RPC with user {msg.User.Username}.");
+			Client.OnPresenceUpdate += (sender, msg) => Log.Output("Presence has been updated.");
+
+			Client.Initialize();
+			Client.SetPresence(Presence);
+		}
+
+		public static void Home()
+		{
+			Presence.State = "In main window 🏠";
+			Client.SetPresence(Presence);
+		}
+	}
+
+	internal abstract class WebHook
+	{
+		public static async void OpenedLauncher(int launchCount)
+		{
 			DiscordWebhookClient client = new DiscordWebhookClient(Config.WebHookUrlDefault);
 			DiscordMessage message = new DiscordMessage(embeds: new[]
 			{
@@ -48,6 +67,9 @@ namespace Genshin_Impact_Mod.Scripts
 				}, footer: new DiscordMessageEmbedFooter($"📅 {DateTime.Now:HH:mm:ss, dd.MM.yyyy} • {Os.TimeZone}"))
 			});
 			await client.SendToDiscord(message);
+
+			MethodBase m = MethodBase.GetCurrentMethod();
+			Log.Output($"Delivered WebHook with telemetry '{m?.ReflectedType?.Name}' [1].");
 		}
 
 		public static async void SendLogFiles()
@@ -64,21 +86,23 @@ namespace Genshin_Impact_Mod.Scripts
 				// Files
 				string content1 = "File launcher.output.log is empty.";
 				if (File.Exists(Log.OutputFile)) content1 = File.ReadAllText(Log.OutputFile);
-				DiscordFile attachment1 = new DiscordFile("launcher.output.log", Encoding.UTF8.GetBytes(content1));
+				DiscordFile launcherOutput = new DiscordFile("launcher.output.log", Encoding.UTF8.GetBytes(content1));
 
 				string content2 = "File launcher.error.log is empty.";
 				if (File.Exists(Log.ErrorFile)) content2 = File.ReadAllText(Log.ErrorFile);
-				DiscordFile attachment2 = new DiscordFile("launcher.error.log", Encoding.UTF8.GetBytes(content2));
+				DiscordFile launcherErrors = new DiscordFile("launcher.error.log", Encoding.UTF8.GetBytes(content2));
 
 				string content3 = "File installer.output.log is empty.";
 				if (File.Exists(Log.InstOutputFile)) content3 = File.ReadAllText(Log.InstOutputFile);
-				DiscordFile gitLog = new DiscordFile("installer.output.log", Encoding.UTF8.GetBytes(content3));
+				DiscordFile installerOutput = new DiscordFile("installer.output.log", Encoding.UTF8.GetBytes(content3));
 
 				// Send
-				await client.SendToDiscord(message, new[] { attachment1, attachment2, gitLog });
+				await client.SendToDiscord(message, new[] { launcherOutput, launcherErrors, installerOutput });
 
-				// Debug log
+				// Last logs
 				Log.Output("Log files was sent to developer.");
+				MethodBase m = MethodBase.GetCurrentMethod();
+				Log.Output($"Delivered WebHook with telemetry '{m?.ReflectedType?.Name}' [2].");
 			}
 			catch (Exception ex)
 			{
@@ -86,7 +110,7 @@ namespace Genshin_Impact_Mod.Scripts
 			}
 		}
 
-		public static async void SupportMe_Form_Yes()
+		public static async void SupportMe_AnswYes()
 		{
 			DiscordWebhookClient client = new DiscordWebhookClient(Config.WebHookUrlDefault);
 			DiscordMessage message = new DiscordMessage(embeds: new[]
@@ -95,9 +119,12 @@ namespace Genshin_Impact_Mod.Scripts
 					footer: new DiscordMessageEmbedFooter($"📅 {DateTime.Now:HH:mm:ss, dd.MM.yyyy} • {Os.TimeZone}"))
 			});
 			await client.SendToDiscord(message);
+
+			MethodBase m = MethodBase.GetCurrentMethod();
+			Log.Output($"Delivered WebHook with telemetry '{m?.ReflectedType?.Name}' [3].");
 		}
 
-		public static async void SupportMe_Form_No()
+		public static async void SupportMe_AnswNo()
 		{
 			DiscordWebhookClient client = new DiscordWebhookClient(Config.WebHookUrlDefault);
 			DiscordMessage message = new DiscordMessage(embeds: new[]
@@ -106,13 +133,13 @@ namespace Genshin_Impact_Mod.Scripts
 					footer: new DiscordMessageEmbedFooter($"📅 {DateTime.Now:HH:mm:ss, dd.MM.yyyy} • {Os.TimeZone}"))
 			});
 			await client.SendToDiscord(message);
+
+			MethodBase m = MethodBase.GetCurrentMethod();
+			Log.Output($"Delivered WebHook with telemetry '{m?.ReflectedType?.Name}' [4].");
 		}
 
 		public static async void WebHook_Error(Exception ex)
 		{
-			// var telemetryFile = File.ReadAllLines(Tools.TelemetryFile)[0];
-			// if (telemetryFile == "false") return;
-
 			DiscordWebhookClient client = new DiscordWebhookClient(Config.WebHookUrlErrors);
 			DiscordMessage message = new DiscordMessage(embeds: new[]
 			{
@@ -124,27 +151,9 @@ namespace Genshin_Impact_Mod.Scripts
 				}, footer: new DiscordMessageEmbedFooter($"📅 {DateTime.Now:HH:mm:ss, dd.MM.yyyy} • {Os.TimeZone}"))
 			});
 			await client.SendToDiscord(message);
-		}
 
-		public static void RunRpc()
-		{
-			Client = new DiscordRpcClient(Config.AppId, DiscordPipe)
-			{
-				Logger = new ConsoleLogger(LogLevel, true)
-			};
-
-			Client.Logger = new ConsoleLogger { Level = LogLevel.Warning };
-			Client.OnReady += (sender, msg) => Log.Output($"Connected to Discord RPC with user {msg.User.Username}.");
-			Client.OnPresenceUpdate += (sender, msg) => Log.Output("Presence has been updated.");
-
-			Client.Initialize();
-			Client.SetPresence(Presence);
-		}
-
-		public static void Home()
-		{
-			Presence.State = "Home page 🏠";
-			Client.SetPresence(Presence);
+			MethodBase m = MethodBase.GetCurrentMethod();
+			Log.Output($"Delivered WebHook with telemetry '{m?.ReflectedType?.Name}' [5].");
 		}
 	}
 }

@@ -45,7 +45,7 @@ namespace Genshin_Impact_Mod.Scripts
 		{
 			Error(ex);
 
-			Discord.WebHook_Error(ex);
+			WebHook.WebHook_Error(ex);
 			Environment.Exit(0);
 		}
 	}

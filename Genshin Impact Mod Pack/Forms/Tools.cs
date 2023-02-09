@@ -41,8 +41,8 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Exit_Click(object sender, EventArgs e)
 		{
-			Close();
 			Log.Output($"Closed form '{Text}'.");
+			Close();
 
 			Discord.Home();
 		}
@@ -52,7 +52,7 @@ namespace Genshin_Impact_Mod.Forms
 			version_Label.Text = $@"v{Program.AppVersion}";
 
 			DiscordRpcClient client = Discord.Client;
-			Discord.Presence.State = "Tools page ⚙";
+			Discord.Presence.State = "Tools page 🔧";
 			client.SetPresence(Discord.Presence);
 
 			Log.Output($"Loaded form '{Text}'.");
@@ -87,8 +87,7 @@ namespace Genshin_Impact_Mod.Forms
 		private void CreateShortcut_Button(object sender, EventArgs e)
 		{
 			bool success = CreateShortcut();
-			if (success)
-				MessageBox.Show(@"The shortcut has been successfully created.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+			if (success) MessageBox.Show(@"The shortcut has been successfully created.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		private async void ScanSysFiles_Click(object sender, EventArgs e)

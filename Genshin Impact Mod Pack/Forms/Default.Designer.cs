@@ -662,7 +662,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(149, 520);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(526, 20);
+            this.label3.Size = new System.Drawing.Size(518, 20);
             this.label3.TabIndex = 115;
             this.label3.Text = "Preparing...";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -733,6 +733,8 @@
             this.Name = "Default";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Genshin Impact Mod Pack";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Default_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Default_FormClosed);
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
