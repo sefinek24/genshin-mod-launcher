@@ -98,7 +98,7 @@ namespace Genshin_Impact_Mod.Forms
 					return;
 			}
 
-			string path = $@"{Program.Folder}\Screenshots\Default\Backgrounds\{fileName}.png";
+			string path = $@"{Program.Folder}\screenshots\default\backgrounds\{fileName}.png";
 			BackgroundImage = new Bitmap(path);
 			Log.Output($"Changed app background to '{path}'. ID: {_bgInt}");
 		}
@@ -225,9 +225,9 @@ namespace Genshin_Impact_Mod.Forms
 			version_Label.Text = $@"v{Program.AppVersion}";
 			Log.Output($"Loaded form '{Text}'.");
 
-			if (!File.Exists($@"{Program.Folder}\Data\Unlocker\unlockfps_clr.exe")) status_Label.Text += "[WARN]: Data/Unlocker/unlockfps_clr.exe was not found.\n";
-			if (!File.Exists($@"{Program.Folder}\Data\ReShade\inject64.exe")) status_Label.Text += "[WARN]: Data/ReShade/inject64.exe was not found.\n";
-			if (!File.Exists($@"{Program.Folder}\Data\ReShade\ReShade64.dll")) status_Label.Text += "[WARN]: Data/ReShade/ReShade64.dll was not found.\n";
+			if (!File.Exists($@"{Program.Folder}\data\unlocker\unlockfps_clr.exe")) status_Label.Text += "[WARN]: data/unlocker/unlockfps_clr.exe was not found.\n";
+			if (!File.Exists($@"{Program.Folder}\data\reshade\inject64.exe")) status_Label.Text += "[WARN]: data/reshade/inject64.exe was not found.\n";
+			if (!File.Exists($@"{Program.Folder}\data\reshade\ReShade64.dll")) status_Label.Text += "[WARN]: data/reshade/ReShade64.dll was not found.\n";
 			if (!File.Exists(Program.UnlockerFpsPath))
 			{
 				status_Label.Text += "[i] Downloading config file for FPS Unlocker...\n";

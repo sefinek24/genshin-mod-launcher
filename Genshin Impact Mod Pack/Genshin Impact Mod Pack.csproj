@@ -324,7 +324,7 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>ROBOCOPY "$(TargetDir) " "$(TargetDir)data\libs" /XF *.exe *.config *.manifest *.json /XD data www runtimes /E /IS /MOVE
+if %25errorlevel%25 leq 4 exit 0 else exit %25errorlevel%25</PostBuildEvent>
   </PropertyGroup>
 </Project>
