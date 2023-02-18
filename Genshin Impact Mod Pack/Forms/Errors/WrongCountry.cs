@@ -1,7 +1,7 @@
-﻿using System;
-using Genshin_Impact_Mod.Scripts;
-using System.Windows.Forms;
+﻿using Genshin_Impact_Mod.Scripts;
 using Microsoft.Toolkit.Uwp.Notifications;
+using System;
+using System.Windows.Forms;
 
 namespace Genshin_Impact_Mod.Forms.Errors
 {

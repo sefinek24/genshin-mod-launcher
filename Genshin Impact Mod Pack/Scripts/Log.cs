@@ -1,7 +1,7 @@
-﻿using System;
-using System.IO;
-using Genshin_Impact_Mod.Forms.Errors;
+﻿using Genshin_Impact_Mod.Forms.Errors;
 using Genshin_Impact_Mod.Properties;
+using System;
+using System.IO;
 
 namespace Genshin_Impact_Mod.Scripts
 {

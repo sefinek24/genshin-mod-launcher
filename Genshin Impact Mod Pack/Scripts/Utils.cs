@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace Genshin_Impact_Mod.Scripts
 {
@@ -32,55 +32,55 @@ namespace Genshin_Impact_Mod.Scripts
 			switch (type)
 			{
 				case "giGameDir":
-				{
-					Log.Output($"Found Genshin Impact Game dir: {gameDir} [giGameDir]");
-					return gameDir;
-				}
+					{
+						Log.Output($"Found Genshin Impact Game dir: {gameDir} [giGameDir]");
+						return gameDir;
+					}
 
 				case "giExe":
-				{
-					string genshinImpactExeMain = $@"{gameDir}\GenshinImpact.exe";
-					if (File.Exists(genshinImpactExeMain))
 					{
-						Log.Output($"Found GenshinImpact.exe in: {genshinImpactExeMain} [giExe]");
-						return genshinImpactExeMain;
-					}
-					MessageBox.Show($"File does not exists.\n{genshinImpactExeMain}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-					Log.Output($"File does not exists in: {genshinImpactExeMain} [giExe]");
+						string genshinImpactExeMain = $@"{gameDir}\GenshinImpact.exe";
+						if (File.Exists(genshinImpactExeMain))
+						{
+							Log.Output($"Found GenshinImpact.exe in: {genshinImpactExeMain} [giExe]");
+							return genshinImpactExeMain;
+						}
+						MessageBox.Show($"File does not exists.\n{genshinImpactExeMain}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						Log.Output($"File does not exists in: {genshinImpactExeMain} [giExe]");
 
-					string genshinImpactExeYuanShen = $@"{gameDir}\YuanShen.exe";
-					if (File.Exists(genshinImpactExeYuanShen))
-					{
-						Log.Output($"Found GenshinImpact.exe in: {genshinImpactExeMain} [giExe]");
-						return genshinImpactExeYuanShen;
-					}
-					MessageBox.Show($"File {genshinImpactExeYuanShen} does not exists.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-					Log.Output($"File {genshinImpactExeYuanShen} does not exists. [giExe]");
+						string genshinImpactExeYuanShen = $@"{gameDir}\YuanShen.exe";
+						if (File.Exists(genshinImpactExeYuanShen))
+						{
+							Log.Output($"Found GenshinImpact.exe in: {genshinImpactExeMain} [giExe]");
+							return genshinImpactExeYuanShen;
+						}
+						MessageBox.Show($"File {genshinImpactExeYuanShen} does not exists.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						Log.Output($"File {genshinImpactExeYuanShen} does not exists. [giExe]");
 
-					return null;
-				}
+						return null;
+					}
 
 				case "giLauncher":
-				{
-					string mainDir = Directory.GetParent(gameDir)?.FullName;
-					if (!Directory.Exists(mainDir))
 					{
-						MessageBox.Show($"Directory does not exists.\n{mainDir}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-						Log.Output($"Directory does not exists in: {mainDir} [giLauncher]");
-						return null;
-					}
+						string mainDir = Directory.GetParent(gameDir)?.FullName;
+						if (!Directory.Exists(mainDir))
+						{
+							MessageBox.Show($"Directory does not exists.\n{mainDir}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+							Log.Output($"Directory does not exists in: {mainDir} [giLauncher]");
+							return null;
+						}
 
-					string genshinImpactExe = $@"{mainDir}\launcher.exe";
-					if (!File.Exists(genshinImpactExe) || !File.Exists(genshinImpactExe))
-					{
-						MessageBox.Show($"Launcher file does not exists.\n{genshinImpactExe}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-						Log.Output($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
-						return null;
-					}
+						string genshinImpactExe = $@"{mainDir}\launcher.exe";
+						if (!File.Exists(genshinImpactExe) || !File.Exists(genshinImpactExe))
+						{
+							MessageBox.Show($"Launcher file does not exists.\n{genshinImpactExe}", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+							Log.Output($"Launcher file does not exists in: {genshinImpactExe} [giLauncher]");
+							return null;
+						}
 
-					Log.Output($"Found Genshin Impact Launcher in: {genshinImpactExe} [giLauncher]");
-					return genshinImpactExe;
-				}
+						Log.Output($"Found Genshin Impact Launcher in: {genshinImpactExe} [giLauncher]");
+						return genshinImpactExe;
+					}
 
 				default:
 					return null;
@@ -92,7 +92,7 @@ namespace Genshin_Impact_Mod.Scripts
 			Process.Start(url);
 			Log.Output($"Opened '{url}' in default browser.");
 		}
-	
+
 		public static void RemoveClickEvent(Label b)
 		{
 			FieldInfo f1 = typeof(Control).GetField("EventClick", BindingFlags.Static | BindingFlags.NonPublic);

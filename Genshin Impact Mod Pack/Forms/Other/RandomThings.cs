@@ -1,16 +1,15 @@
-﻿using System;
-using System.Diagnostics;
+﻿using DiscordRPC;
+using Genshin_Impact_Mod.Models;
+using Genshin_Impact_Mod.Scripts;
+using Microsoft.Web.WebView2.Core;
+using Newtonsoft.Json;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DiscordRPC;
-using Genshin_Impact_Mod.Models;
-using Genshin_Impact_Mod.Scripts;
-using Microsoft.Web.WebView2.Core;
-using Newtonsoft.Json;
 
 namespace Genshin_Impact_Mod.Forms.Other
 {

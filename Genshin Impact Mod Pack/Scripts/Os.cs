@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Globalization;
-using Microsoft.Win32;
 
 namespace Genshin_Impact_Mod.Scripts
 {

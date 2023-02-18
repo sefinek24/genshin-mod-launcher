@@ -1,4 +1,13 @@
-﻿using System;
+﻿using ByteSizeLib;
+using Genshin_Impact_Mod.Forms.Errors;
+using Genshin_Impact_Mod.Forms.Other;
+using Genshin_Impact_Mod.Models;
+using Genshin_Impact_Mod.Properties;
+using Genshin_Impact_Mod.Scripts;
+using Microsoft.Toolkit.Uwp.Notifications;
+using Microsoft.WindowsAPICodePack.Taskbar;
+using Newtonsoft.Json;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
@@ -10,15 +19,6 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ByteSizeLib;
-using Genshin_Impact_Mod.Forms.Errors;
-using Genshin_Impact_Mod.Forms.Other;
-using Genshin_Impact_Mod.Models;
-using Genshin_Impact_Mod.Properties;
-using Genshin_Impact_Mod.Scripts;
-using Microsoft.Toolkit.Uwp.Notifications;
-using Microsoft.WindowsAPICodePack.Taskbar;
-using Newtonsoft.Json;
 
 // 1 = ReShade + FPS Unlocker
 // 2 = ReShade

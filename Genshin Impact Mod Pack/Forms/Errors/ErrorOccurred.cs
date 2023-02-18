@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Genshin_Impact_Mod.Scripts;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Genshin_Impact_Mod.Scripts;
 
 namespace Genshin_Impact_Mod.Forms.Errors
 {

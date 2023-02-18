@@ -1,10 +1,10 @@
-﻿using System;
+﻿using DiscordRPC;
+using DiscordRPC.Logging;
+using JNogueira.Discord.Webhook.Client;
+using System;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using DiscordRPC;
-using DiscordRPC.Logging;
-using JNogueira.Discord.Webhook.Client;
 
 namespace Genshin_Impact_Mod.Scripts
 {

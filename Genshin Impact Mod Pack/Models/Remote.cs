@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Genshin_Impact_Mod.Models
+﻿namespace Genshin_Impact_Mod.Models
 {
 	public class ModApi
 	{

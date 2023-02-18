@@ -1,13 +1,12 @@
-﻿using System;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using DiscordRPC;
+﻿using DiscordRPC;
 using Genshin_Impact_Mod.Forms.Other;
 using Genshin_Impact_Mod.Properties;
 using Genshin_Impact_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
+using System;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Genshin_Impact_Mod.Forms
 {

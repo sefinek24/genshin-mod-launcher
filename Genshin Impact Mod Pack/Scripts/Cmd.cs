@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CliWrap;
+﻿using CliWrap;
 using CliWrap.Buffered;
 using Genshin_Impact_Mod.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
+using System;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Genshin_Impact_Mod.Scripts
 {
@@ -48,21 +48,21 @@ namespace Genshin_Impact_Mod.Scripts
 					switch (result.ExitCode)
 					{
 						case 3010:
-						{
-							try
 							{
-								ToastContentBuilder builder = new ToastContentBuilder().AddText("Update alert 📄").AddText("Required dependency has been successfully installed, but your computer needs a restart.");
-								builder.Show();
-							}
-							catch (Exception ex)
-							{
-								Log.ErrorAuditLog(ex);
-							}
+								try
+								{
+									ToastContentBuilder builder = new ToastContentBuilder().AddText("Update alert 📄").AddText("Required dependency has been successfully installed, but your computer needs a restart.");
+									builder.Show();
+								}
+								catch (Exception ex)
+								{
+									Log.ErrorAuditLog(ex);
+								}
 
-							MessageBox.Show("The requested operation is successful, but your PC needs reboot.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-							Log.Output($"{app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
-							return;
-						}
+								MessageBox.Show("The requested operation is successful, but your PC needs reboot.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+								Log.Output($"{app} installed. Exit code: {result.ExitCode}\nThe requested operation is successful. Changes will not be effective until the system is rebooted.");
+								return;
+							}
 
 						case 5:
 							const string mainInfo = "Software was denied access to a location for the purposes of saving, copying, opening, or loading files.";
@@ -71,14 +71,14 @@ namespace Genshin_Impact_Mod.Scripts
 							return;
 
 						default:
-						{
-							if (!downloadSetup)
-								Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({app}) returned a non-zero exit code - {result.ExitCode}.\n{info}"));
-							else
-								Log.ErrorAuditLog(new Exception(info));
+							{
+								if (!downloadSetup)
+									Log.ErrorAndExit(new Exception($"Command execution failed because the underlying process ({app}) returned a non-zero exit code - {result.ExitCode}.\n{info}"));
+								else
+									Log.ErrorAuditLog(new Exception(info));
 
-							return;
-						}
+								return;
+							}
 					}
 				}
 

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Genshin_Impact_Mod.Properties;
+using Genshin_Impact_Mod.Scripts;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Genshin_Impact_Mod.Properties;
-using Genshin_Impact_Mod.Scripts;
 
 namespace Genshin_Impact_Mod.Forms.Other
 {

@@ -1,15 +1,15 @@
-﻿using System;
+﻿using Genshin_Impact_Mod.Forms;
+using Genshin_Impact_Mod.Forms.Errors;
+using Genshin_Impact_Mod.Forms.Other;
+using Genshin_Impact_Mod.Properties;
+using Genshin_Impact_Mod.Scripts;
+using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
-using Genshin_Impact_Mod.Forms;
-using Genshin_Impact_Mod.Forms.Errors;
-using Genshin_Impact_Mod.Forms.Other;
-using Genshin_Impact_Mod.Properties;
-using Genshin_Impact_Mod.Scripts;
 
 namespace Genshin_Impact_Mod
 {

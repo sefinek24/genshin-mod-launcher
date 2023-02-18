@@ -1,11 +1,11 @@
-﻿using System;
+﻿using DiscordRPC;
+using Genshin_Impact_Mod.Scripts;
+using IWshRuntimeLibrary;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using DiscordRPC;
-using Genshin_Impact_Mod.Scripts;
-using IWshRuntimeLibrary;
 using File = System.IO.File;
 
 namespace Genshin_Impact_Mod.Forms
