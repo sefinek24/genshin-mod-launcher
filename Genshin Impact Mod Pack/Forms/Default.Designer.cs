@@ -144,7 +144,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(24, 24);
             this.panel2.TabIndex = 76;
-            this.toolTip1.SetToolTip(this.panel2, "Close");
+            this.toolTip1.SetToolTip(this.panel2, "Exit the launcher");
             this.panel2.Click += new System.EventHandler(this.Exit_Click);
             // 
             // githubURL_Label
