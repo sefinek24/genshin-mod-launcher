@@ -55,37 +55,37 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void TIMap_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://act.hoyolab.com/ys/app/interactive-map/index.html");
+			Utils.OpenUrl("https://act.hoyolab.com/ys/app/interactive-map/index.html");
 		}
 
 		private void GIInterWorldMap_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://genshin-impact-map.appsample.com");
+			Utils.OpenUrl("https://genshin-impact-map.appsample.com");
 		}
 
 		private void GIBTierList_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://genshin.gg/tier-list");
+			Utils.OpenUrl("https://genshin.gg/tier-list");
 		}
 
 		private void TLBCHD_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://game8.co/games/Genshin-Impact/archives/297465");
+			Utils.OpenUrl("https://game8.co/games/Genshin-Impact/archives/297465");
 		}
 
 		private void Uptimerobot_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://stats.uptimerobot.com/kLXYEukEwW");
+			Utils.OpenUrl("https://stats.uptimerobot.com/kLXYEukEwW");
 		}
 
 		private void Api_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://api.sefinek.net");
+			Utils.OpenUrl("https://api.sefinek.net");
 		}
 
 		private void Cdn_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://cdn.sefinek.net");
+			Utils.OpenUrl("https://cdn.sefinek.net");
 		}
 	}
 }

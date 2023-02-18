@@ -71,7 +71,7 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void ViewInBrowser_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://www.youtube.com/watch?v=rDeO26RapAk");
+			Utils.OpenUrl("https://www.youtube.com/watch?v=rDeO26RapAk");
 		}
 
 		private void Gallery_Button(object sender, EventArgs e)
@@ -83,12 +83,12 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Discord_Button(object sender, EventArgs e)
 		{
-			Open.InBrowser(Discord.Invitation);
+			Utils.OpenUrl(Discord.Invitation);
 		}
 
 		private void Website_Button(object sender, EventArgs e)
 		{
-			Open.InBrowser(Program.AppWebsite);
+			Utils.OpenUrl(Program.AppWebsite);
 		}
 	}
 }

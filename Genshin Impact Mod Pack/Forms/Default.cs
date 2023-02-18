@@ -285,7 +285,7 @@ namespace Genshin_Impact_Mod.Forms
 		// ------- Body -------
 		private void GitHub_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://github.com/sefinek24/Genshin-Impact-ReShade");
+			Utils.OpenUrl("https://github.com/sefinek24/Genshin-Impact-ReShade");
 		}
 
 		private void AnimeGirl1_DoubleClick(object sender, EventArgs e)
@@ -307,7 +307,7 @@ namespace Genshin_Impact_Mod.Forms
 			string json = await client.DownloadStringTaskAsync("https://api.alexflipnote.dev/sadcat");
 			AlexflipnoteApi res = JsonConvert.DeserializeObject<AlexflipnoteApi>(json);
 
-			Open.InBrowser(res.File);
+			Utils.OpenUrl(res.File);
 		}
 
 		// ------- Start the game -------
@@ -356,22 +356,22 @@ namespace Genshin_Impact_Mod.Forms
 		// ------- Footer -------
 		private void Patron_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://www.patreon.com/sefinek");
+			Utils.OpenUrl("https://www.patreon.com/sefinek");
 		}
 
 		private void SupportMe_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://sefinek.net/support-me");
+			Utils.OpenUrl("https://sefinek.net/support-me");
 		}
 
 		private void Discord_Button(object sender, EventArgs e)
 		{
-			Open.InBrowser(Discord.Invitation);
+			Utils.OpenUrl(Discord.Invitation);
 		}
 
 		private void YouTube_Button(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://www.youtube.com/@sefinek");
+			Utils.OpenUrl("https://www.youtube.com/@sefinek");
 		}
 
 		private void Settings_Click(object sender, EventArgs e)
@@ -397,12 +397,12 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Website_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser(Program.AppWebsite);
+			Utils.OpenUrl(Program.AppWebsite);
 		}
 
 		private void Version_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/CHANGELOG.md");
+			Utils.OpenUrl("https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/CHANGELOG.md");
 		}
 
 		private async void CheckUpdates_Click(object sender, EventArgs e)
@@ -514,7 +514,7 @@ namespace Genshin_Impact_Mod.Forms
 
 		private void Beta_Click(object sender, EventArgs e)
 		{
-			Open.InBrowser("https://www.youtube.com/watch?v=VzdQ6eFWeR0");
+			Utils.OpenUrl("https://www.youtube.com/watch?v=VzdQ6eFWeR0");
 		}
 	}
 }

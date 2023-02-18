@@ -157,7 +157,6 @@
     <Compile Include="Scripts\Discord.cs" />
     <Compile Include="Scripts\GetGame.cs" />
     <Compile Include="Scripts\Log.cs" />
-    <Compile Include="Scripts\Open.cs" />
     <Compile Include="Scripts\Os.cs" />
     <Compile Include="Scripts\Utils.cs" />
     <Compile Include="Scripts\WebView2Handler.cs" />
