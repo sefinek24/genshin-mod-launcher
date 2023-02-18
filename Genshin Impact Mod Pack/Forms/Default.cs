@@ -273,7 +273,7 @@ namespace Genshin_Impact_Mod.Forms
 			// Music
 			try
 			{
-				new SoundPlayer { SoundLocation = @"Data\music.wav" }.Play();
+				new SoundPlayer { SoundLocation = @"data\music.wav" }.Play();
 			}
 			catch (Exception e2)
 			{
