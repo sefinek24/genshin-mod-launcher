@@ -14,7 +14,7 @@ namespace Genshin_Impact_Mod.Scripts
 				if (res == DialogResult.Yes)
 				{
 					Process.Start("https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section");
-					MessageBox.Show(@"Choose Evergreen Standalone Installer.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show("Choose Evergreen Standalone Installer.", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}
 			else
