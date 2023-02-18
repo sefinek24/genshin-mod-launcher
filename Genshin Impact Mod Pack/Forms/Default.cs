@@ -330,7 +330,7 @@ namespace Genshin_Impact_Mod.Forms
 
 			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\start.cmd", null, false, false, false);
 
-			string path = GetGame.Find("giLauncher");
+			string path = Utils.GetGame("giLauncher");
 			if (path == null) return;
 			await Cmd.Execute(path, null, null, true, false, false);
 		}
@@ -347,7 +347,7 @@ namespace Genshin_Impact_Mod.Forms
 
 		private async void OpenGILauncher_Click(object sender, EventArgs e)
 		{
-			string path = GetGame.Find("giLauncher");
+			string path = Utils.GetGame("giLauncher");
 			if (path == null) return;
 
 			await Cmd.Execute(path, null, null, false, true, false);
