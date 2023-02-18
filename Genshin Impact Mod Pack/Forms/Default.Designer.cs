@@ -162,7 +162,7 @@
             this.githubURL_Label.TabIndex = 75;
             this.githubURL_Label.TabStop = true;
             this.githubURL_Label.Text = "github.com/sefinek24/Genshin-Impact-ReShade";
-            this.toolTip1.SetToolTip(this.githubURL_Label, "GitHub repository.");
+            this.toolTip1.SetToolTip(this.githubURL_Label, "Main GitHub repository. Star the repo if you like my work.");
             this.githubURL_Label.Click += new System.EventHandler(this.GitHub_Click);
             // 
             // label2
@@ -179,6 +179,7 @@
             this.label2.TabIndex = 74;
             this.label2.Text = "made by Sefinek";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip1.SetToolTip(this.label2, ">~~<");
             // 
             // label1
             // 
@@ -207,7 +208,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, ">~~<");
+            this.toolTip1.SetToolTip(this.pictureBox1, "GitHub icon");
             this.pictureBox1.Click += new System.EventHandler(this.GitHub_Click);
             // 
             // settings_Label
@@ -260,7 +261,7 @@
             this.linkLabel4.TabIndex = 90;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "YouTube";
-            this.toolTip1.SetToolTip(this.linkLabel4, "My YouTube channel.");
+            this.toolTip1.SetToolTip(this.linkLabel4, "My YouTube channel. Subscribe me if you like this project.");
             this.linkLabel4.Click += new System.EventHandler(this.YouTube_Button);
             // 
             // linkLabel12
@@ -280,7 +281,7 @@
             this.linkLabel12.TabStop = true;
             this.linkLabel12.Text = "Start game";
             this.linkLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.linkLabel12, "Run Genshin Impact with injected ReShade and FPS Unlocker.");
+            this.toolTip1.SetToolTip(this.linkLabel12, "Run Genshin with injected ReShade and FPS Unlocker - recommended.");
             this.linkLabel12.Click += new System.EventHandler(this.StartGame_Click);
             // 
             // linkLabel11
@@ -298,7 +299,7 @@
             this.linkLabel11.TabIndex = 93;
             this.linkLabel11.TabStop = true;
             this.linkLabel11.Text = "Run only FPS Unlocker";
-            this.toolTip1.SetToolTip(this.linkLabel11, "Run Genshin Impact with only FPS Unlocker.");
+            this.toolTip1.SetToolTip(this.linkLabel11, "Run game with only FPS Unlocker.");
             this.linkLabel11.Click += new System.EventHandler(this.OnlyUnlocker_Click);
             // 
             // linkLabel10
@@ -368,7 +369,7 @@
             this.linkLabel1.TabIndex = 100;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Support me";
-            this.toolTip1.SetToolTip(this.linkLabel1, "Buy Me a Coffee at ko-fi.com.");
+            this.toolTip1.SetToolTip(this.linkLabel1, "Support my work.");
             this.linkLabel1.Click += new System.EventHandler(this.SupportMe_Click);
             // 
             // linkLabel7
@@ -388,7 +389,7 @@
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Text = "If you want Ray Tracing in game, become my Patron.\r\nRTX cards are not required.";
             this.linkLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.linkLabel7, "www.patreon.com/sefinek");
+            this.toolTip1.SetToolTip(this.linkLabel7, "Go to https://patreon.com/sefinek");
             this.linkLabel7.Click += new System.EventHandler(this.Patron_Click);
             // 
             // linkLabel6
@@ -407,7 +408,7 @@
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Open Genshin Impact Launcher";
             this.linkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.linkLabel6, "Just open main game launcher.");
+            this.toolTip1.SetToolTip(this.linkLabel6, "Open the main game launcher.");
             this.linkLabel6.Click += new System.EventHandler(this.OpenGILauncher_Click);
             // 
             // version_Label
@@ -662,7 +663,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(149, 520);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(518, 20);
+            this.label3.Size = new System.Drawing.Size(508, 20);
             this.label3.TabIndex = 115;
             this.label3.Text = "Preparing...";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
