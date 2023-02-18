@@ -14,7 +14,6 @@ namespace Genshin_Impact_Mod.Scripts
 
 		private const int DiscordPipe = -1;
 		private static readonly LogLevel LogLevel = LogLevel.Trace;
-
 		public static DiscordRpcClient Client;
 
 		public static readonly RichPresence Presence = new RichPresence
