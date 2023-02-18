@@ -21,11 +21,11 @@ namespace Genshin_Impact_Mod
 
 		// Directories
 		public const string Folder = @"C:\Genshin-Impact-ReShade";
-		private const string PatronsDir = Folder + @"\Data\Presets\Patrons";
+		private const string PatronsDir = Folder + @"\data\presets\patrons";
 		public static readonly string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Genshin Impact MP by Sefinek";
 
 		// Files
-		public static readonly string UnlockerFpsPath = Folder + @"\Data\Unlocker\unlocker.config.json";
+		public static readonly string UnlockerFpsPath = Folder + @"\data\unlocker\unlocker.config.json";
 		private static readonly string InstalledViaSetup = AppData + @"\installed-via-setup.sfn";
 		private static readonly string LaunchCountFile = AppData + @"\launch-count.sfn";
 		private static readonly string TierActivated = AppData + @"\tier-activated.sfn";

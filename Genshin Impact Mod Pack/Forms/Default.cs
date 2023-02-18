@@ -318,7 +318,7 @@ namespace Genshin_Impact_Mod.Forms
 				await sw.WriteAsync("1");
 			}
 
-			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\start.cmd", null, true, false, false);
+			await Cmd.Execute("wt", $@"{Program.Folder}\data\cmd\start.cmd", null, true, false, false);
 		}
 
 		private async void OnlyReShade_Click(object sender, EventArgs e)
@@ -328,7 +328,7 @@ namespace Genshin_Impact_Mod.Forms
 				await sw.WriteAsync("2");
 			}
 
-			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\start.cmd", null, false, false, false);
+			await Cmd.Execute("wt", $@"{Program.Folder}\data\cmd\start.cmd", null, false, false, false);
 
 			string path = Utils.GetGame("giLauncher");
 			if (path == null) return;
@@ -342,7 +342,7 @@ namespace Genshin_Impact_Mod.Forms
 				await sw.WriteAsync("3");
 			}
 
-			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\start.cmd", null, true, false, false);
+			await Cmd.Execute("wt", $@"{Program.Folder}\data\cmd\start.cmd", null, true, false, false);
 		}
 
 		private async void OpenGILauncher_Click(object sender, EventArgs e)

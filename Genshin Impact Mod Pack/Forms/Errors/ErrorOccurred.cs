@@ -39,7 +39,7 @@ namespace Genshin_Impact_Mod.Forms.Errors
 
 		private async void SfcScan_Click(object sender, EventArgs e)
 		{
-			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\scan_sys_files.cmd", null, false, true, false);
+			await Cmd.Execute("wt", $@"{Program.Folder}\data\cmd\scan_sys_files.cmd", null, false, true, false);
 		}
 	}
 }

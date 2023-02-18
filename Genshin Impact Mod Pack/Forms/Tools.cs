@@ -92,7 +92,7 @@ namespace Genshin_Impact_Mod.Forms
 
 		private async void ScanSysFiles_Click(object sender, EventArgs e)
 		{
-			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\scan_sys_files.cmd", null, false, true, false);
+			await Cmd.Execute("wt", $@"{Program.Folder}\data\cmd\scan_sys_files.cmd", null, false, true, false);
 		}
 
 		private async void ReShadeConfig_Click(object sender, EventArgs e)
@@ -109,18 +109,18 @@ namespace Genshin_Impact_Mod.Forms
 
 		private async void UnlockerConfig_Click(object sender, EventArgs e)
 		{
-			await Cmd.Execute("notepad", $@"{Program.Folder}\Data\FPS Unlocker\unlocker.config.json", null, false, true, false);
+			await Cmd.Execute("notepad", $@"{Program.Folder}\data\unlocker\unlocker.config.json", null, false, true, false);
 		}
 
 		// ----------------- Cache -----------------
 		private async void DeleteCache_Button(object sender, EventArgs e)
 		{
-			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\delete_cache.cmd", null, false, true, false);
+			await Cmd.Execute("wt", $@"{Program.Folder}\data\cmd\delete_cache.cmd", null, false, true, false);
 		}
 
 		private async void DeleteWebViewCache_Click(object sender, EventArgs e)
 		{
-			await Cmd.Execute("wt", $@"{Program.Folder}\Data\Cmd\delete_webview_cache.cmd", null, false, true, false);
+			await Cmd.Execute("wt", $@"{Program.Folder}\data\cmd\delete_webview_cache.cmd", null, false, true, false);
 		}
 
 		// ----------------- Logs -----------------
