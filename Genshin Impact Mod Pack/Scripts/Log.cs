@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Genshin_Impact_Mod.Forms.Errors;
 using Genshin_Impact_Mod.Properties;
@@ -17,7 +17,7 @@ namespace Genshin_Impact_Mod.Scripts
             if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
             if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
 
-            using (StreamWriter sw = File.AppendText(OutputFile))
+            using (var sw = File.AppendText(OutputFile))
             {
                 await sw.WriteLineAsync($"[{DateTime.Now}]: {log}");
             }
@@ -28,7 +28,7 @@ namespace Genshin_Impact_Mod.Scripts
             if (!Directory.Exists(Program.AppData)) Directory.CreateDirectory(Program.AppData);
             if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
 
-            using (StreamWriter sw = File.AppendText(ErrorFile))
+            using (var sw = File.AppendText(ErrorFile))
             {
                 await sw.WriteLineAsync($"[{DateTime.Now}]: {Program.AppName} • v{Program.AppVersion}\n{log}\n\n");
             }
