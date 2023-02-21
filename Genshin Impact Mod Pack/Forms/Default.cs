@@ -132,7 +132,7 @@ namespace Genshin_Impact_Mod.Forms
                 client.Headers.Add("user-agent", Program.UserAgent);
                 var json = await client.DownloadStringTaskAsync(
                     "https://api.sefinek.net/api/v2/genshin-impact-reshade/launcher/version");
-                var res = JsonConvert.DeserializeObject<ModApi>(json);
+                var res = JsonConvert.DeserializeObject<LauncherApi>(json);
 
                 if (res.Version[0] != Program.AppVersion[0])
                 {
@@ -142,7 +142,8 @@ namespace Genshin_Impact_Mod.Forms
                     updates_Label.Text = "Major version is available";
                     update_Icon.Image = Resources.icons8_download_from_the_cloud;
 
-                    Log.Output($"New major version is available: v{Program.AppVersion} → v{res.Version} ({res.Date})");
+                    Log.Output(
+                        $"New major version from {res.Date} is available: v{Program.AppVersion} → v{res.Version}");
 
                     UpdateIsAvailable = true;
                     TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
@@ -185,7 +186,8 @@ namespace Genshin_Impact_Mod.Forms
                         Log.ErrorAuditLog(e);
                     }
 
-                    Log.Output($"New release is available: v{Program.AppVersion} → v{res.Version} [{updateSize} MB]");
+                    Log.Output(
+                        $"New release from {res.Date} is available: v{Program.AppVersion} → v{res.Version} [{updateSize} MB]");
 
                     // Hide and show elements
                     progressBar1.Hide();
