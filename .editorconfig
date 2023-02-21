@@ -1,26 +1,44 @@
+# EditorConfig is awesome: https://EditorConfig.org
 
-[*.cs]
-indent_style = tab
-indent_size = tab
-tab_width = 4
+# Top-most EditorConfig file
+root = true
 
+# Default settings
 [*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
 
-# ReSharper properties
-resharper_blank_lines_after_block_statements = 0
-resharper_blank_lines_after_start_comment = 0
-resharper_blank_lines_around_auto_property = 0
-resharper_blank_lines_around_property = 0
-resharper_blank_lines_around_single_line_type = 0
-resharper_csharp_blank_lines_around_field = 0
-resharper_csharp_blank_lines_around_region = 0
-resharper_csharp_blank_lines_inside_region = 0
-resharper_csharp_keep_blank_lines_in_declarations = 1
-resharper_csharp_max_line_length = 256
-resharper_csharp_wrap_lines = false
-resharper_keep_existing_linebreaks = false
+# Use spaces rather than tabs and set tab size to 4
+[*.cs]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+csharp_version = 7.3
+dotnet_sort_system_directives_first = true
 
-# Microsoft .NET properties
-csharp_style_var_elsewhere = false:suggestion
-csharp_style_var_for_built_in_types = false:suggestion
-csharp_style_var_when_type_is_apparent = false:suggestion
+# Ensure files use the Windows line ending
+end_of_line = crlf
+
+# Ensure consistent line endings on all platforms
+[*.{cs,txt,md,html,js,json,xml}]
+end_of_line = lf
+
+# Specify code style preferences
+[*.cs]
+# C# code style preferences
+csharp_preferred_modifier_order = public,private,protected,internal,static,readonly,volatile,override,abstract,sealed,unsafe,extern
+csharp_preferred_modifier_order_for_events = protected,internal,private,public,static
+csharp_preferred_modifier_order_for_indexers = public,private,protected,internal,static,readonly,volatile,override,abstract,sealed,unsafe,extern
+csharp_preferred_modifier_order_for_methods = public,private,protected,internal,static,readonly,volatile,override,abstract,sealed,unsafe,extern
+csharp_preferred_modifier_order_for_properties = public,private,protected,internal,static,readonly,volatile,override,abstract,sealed,unsafe,extern
+
+# Specify code analysis settings
+[*.cs]
+# Code analysis settings
+dotnet_diagnostic.CA1062.severity = error
+dotnet_diagnostic.CA1303.severity = error
+dotnet_diagnostic.CA1822.severity = error
+dotnet_diagnostic.CA2007.severity = error
+dotnet_diagnostic.CA2208.severity = error
+dotnet_diagnostic.CA2213.severity = error
