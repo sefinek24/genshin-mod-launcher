@@ -123,7 +123,7 @@ namespace Genshin_Impact_Mod
                     case 20:
                     case 42:
                     case 63:
-                        Application.Run(new SupportMe { Icon = Resources.icon_52x52 });
+                        if (!File.Exists(TierActivated)) Application.Run(new SupportMe { Icon = Resources.icon_52x52 });
                         return;
 
                     case 26:
