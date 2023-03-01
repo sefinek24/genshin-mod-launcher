@@ -38,11 +38,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Alef", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(12, 473);
+            this.label1.Location = new System.Drawing.Point(12, 479);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(470, 68);
+            this.label1.Size = new System.Drawing.Size(483, 68);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Russian cunt";
+            this.label1.Text = "Russian cunt xD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WrongCountry
@@ -51,7 +51,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Genshin_Impact_Mod.Properties.Resources.IMG_20220810_133130_1_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(494, 550);
+            this.ClientSize = new System.Drawing.Size(507, 556);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "WrongCountry";

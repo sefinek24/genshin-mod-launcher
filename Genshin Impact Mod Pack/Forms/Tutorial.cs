@@ -76,10 +76,8 @@ namespace Genshin_Impact_Mod.Forms
 
         private void Gallery_Button(object sender, EventArgs e)
         {
-            var frm = new Gallery { Icon = Resources.icon_52x52 };
-            if (Application.OpenForms.OfType<Gallery>().Count() == 1)
-                Application.OpenForms.OfType<Gallery>().First().Close();
-            frm.Show();
+            Application.OpenForms.OfType<Gallery>().FirstOrDefault()?.Close();
+            new Gallery { Location = Location, Icon = Resources.icon_52x52 }.Show();
         }
 
         private void Discord_Button(object sender, EventArgs e)

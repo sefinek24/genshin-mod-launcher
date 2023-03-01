@@ -156,7 +156,7 @@
             this.githubURL_Label.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.githubURL_Label.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.githubURL_Label.LinkColor = System.Drawing.Color.White;
-            this.githubURL_Label.Location = new System.Drawing.Point(647, 116);
+            this.githubURL_Label.Location = new System.Drawing.Point(644, 116);
             this.githubURL_Label.Name = "githubURL_Label";
             this.githubURL_Label.Size = new System.Drawing.Size(362, 23);
             this.githubURL_Label.TabIndex = 75;
@@ -173,13 +173,14 @@
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label2.Location = new System.Drawing.Point(836, 83);
+            this.label2.Location = new System.Drawing.Point(830, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 29);
             this.label2.TabIndex = 74;
             this.label2.Text = "made by Sefinek";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.toolTip1.SetToolTip(this.label2, ">~~<");
+            this.label2.Click += new System.EventHandler(this.MadeBySefinek_Click);
             // 
             // label1
             // 
@@ -189,11 +190,11 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label1.Location = new System.Drawing.Point(535, 45);
+            this.label1.Location = new System.Drawing.Point(560, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(480, 38);
+            this.label1.Size = new System.Drawing.Size(449, 38);
             this.label1.TabIndex = 73;
-            this.label1.Text = "Genshin Impact ReShade Mod Pack";
+            this.label1.Text = "Genshin Impact Stella Mod 2023";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pictureBox1
@@ -202,7 +203,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_github;
-            this.pictureBox1.Location = new System.Drawing.Point(618, 116);
+            this.pictureBox1.Location = new System.Drawing.Point(615, 116);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(23, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -551,7 +552,7 @@
             this.status_Label.ForeColor = System.Drawing.Color.Snow;
             this.status_Label.Location = new System.Drawing.Point(9, 45);
             this.status_Label.Name = "status_Label";
-            this.status_Label.Size = new System.Drawing.Size(511, 138);
+            this.status_Label.Size = new System.Drawing.Size(539, 138);
             this.status_Label.TabIndex = 96;
             // 
             // pictureBox6
@@ -663,7 +664,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(149, 520);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(508, 20);
+            this.label3.Size = new System.Drawing.Size(500, 20);
             this.label3.TabIndex = 115;
             this.label3.Text = "Preparing...";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -678,7 +679,7 @@
             this.linkLabel8.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel8.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel8.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel8.Location = new System.Drawing.Point(538, 83);
+            this.linkLabel8.Location = new System.Drawing.Point(557, 83);
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.Size = new System.Drawing.Size(149, 21);
             this.linkLabel8.TabIndex = 89;

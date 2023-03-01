@@ -79,6 +79,7 @@
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel45 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel46 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
@@ -975,7 +976,26 @@
             this.linkLabel45.Text = "HL cat";
             this.linkLabel45.Click += new System.EventHandler(this.HlCat_Click);
             // 
-            // RandomImg
+            // linkLabel46
+            // 
+            this.linkLabel46.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.linkLabel46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel46.AutoSize = true;
+            this.linkLabel46.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel46.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel46.ForeColor = System.Drawing.Color.Transparent;
+            this.linkLabel46.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel46.LinkColor = System.Drawing.Color.White;
+            this.linkLabel46.Location = new System.Drawing.Point(1137, 635);
+            this.linkLabel46.Name = "linkLabel46";
+            this.linkLabel46.Size = new System.Drawing.Size(153, 25);
+            this.linkLabel46.TabIndex = 52;
+            this.linkLabel46.TabStop = true;
+            this.linkLabel46.Text = "Random hentai";
+            this.linkLabel46.Visible = false;
+            this.linkLabel46.Click += new System.EventHandler(this.RandomHentai_Click);
+            // 
+            // RandomThings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -983,6 +1003,7 @@
             this.BackgroundImage = global::Genshin_Impact_Mod.Properties.Resources.random_images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1576, 816);
+            this.Controls.Add(this.linkLabel46);
             this.Controls.Add(this.linkLabel45);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.webView21);
@@ -1035,7 +1056,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "RandomImg";
+            this.Name = "RandomThings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Random images";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RandomImg_FormClosed);
@@ -1100,5 +1121,6 @@
 		private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.LinkLabel linkLabel45;
-	}
+        private System.Windows.Forms.LinkLabel linkLabel46;
+    }
 }

@@ -116,7 +116,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(996, 38);
             this.label1.TabIndex = 74;
-            this.label1.Text = "Genshin Impact ReShade Mod Pack";
+            this.label1.Text = "Genshin Impact Stella Mod Pack";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -129,7 +129,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(996, 29);
             this.label2.TabIndex = 82;
-            this.label2.Text = "Settings and utils";
+            this.label2.Text = ">> Settings and utils <<";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // settings_Label
@@ -228,28 +228,28 @@
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(344, 264);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 28);
+            this.label4.Size = new System.Drawing.Size(286, 28);
             this.label4.TabIndex = 88;
-            this.label4.Text = "» Log files";
+            this.label4.Text = "Log files";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(20, 264);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 28);
+            this.label5.Size = new System.Drawing.Size(301, 28);
             this.label5.TabIndex = 89;
-            this.label5.Text = "» Configs\r\n";
+            this.label5.Text = "Config files";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel3
             // 
@@ -385,7 +385,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(301, 29);
             this.label7.TabIndex = 100;
-            this.label7.Text = "Utils";
+            this.label7.Text = "Misc";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -440,6 +440,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(25, 23);
             this.panel3.TabIndex = 104;
+            this.panel3.Click += new System.EventHandler(this.Notepad_Click);
             // 
             // pictureBox9
             // 

@@ -76,9 +76,10 @@ namespace Genshin_Impact_Mod.Scripts
 
                         case 5:
                             const string mainInfo =
-                                "Software was denied access to a location for the purposes of saving, copying, opening, or loading files.";
+                                "Failed to update. The software was denied access to a location, preventing it from saving, copying, opening or loading files.";
                             MessageBox.Show(mainInfo, Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            Log.ErrorAndExit(new Exception(
+
+                            Log.ErrorAuditLog(new Exception(
                                 $"{mainInfo}\nRestart your computer or suspend antivirus program and try again.{info}"));
                             return;
 
@@ -89,7 +90,6 @@ namespace Genshin_Impact_Mod.Scripts
                                     $"Command execution failed because the underlying process ({app}) returned a non-zero exit code - {result.ExitCode}.\n{info}"));
                             else
                                 Log.ErrorAuditLog(new Exception(info));
-
                             return;
                         }
                     }

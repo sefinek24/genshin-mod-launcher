@@ -2,12 +2,10 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Media;
 using System.Net;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
@@ -60,11 +58,11 @@ namespace Genshin_Impact_Mod.Forms
             _mouseDown = false;
         }
 
-        private void ShowPanels(bool show)
+        private void ShowPanels(bool data)
         {
-            panel3.Visible = show;
-            panel4.Visible = show;
-            panel5.Visible = show;
+            panel3.Visible = data;
+            panel4.Visible = data;
+            panel5.Visible = data;
         }
 
         private void ChangeBackground_Click(object sender, EventArgs e)
@@ -72,6 +70,7 @@ namespace Genshin_Impact_Mod.Forms
             _bgInt++;
 
             string fileName;
+
             switch (_bgInt)
             {
                 case 1:
@@ -92,14 +91,22 @@ namespace Genshin_Impact_Mod.Forms
                     fileName = "hutao_3";
                     break;
                 default:
-                    BackgroundImage = new Bitmap(Resources.kokomi_1);
+                    fileName = "kokomi_1";
                     _bgInt = 0;
-                    Log.Output($"Changed app background to default. ID: {_bgInt}");
-                    return;
+                    break;
             }
 
-            var path = $@"{Program.Folder}\screenshots\default\backgrounds\{fileName}.png";
+            var path = Path.Combine(Program.Folder, "screenshots", "default", "backgrounds", $"{fileName}.png");
+
+            if (!File.Exists(path))
+            {
+                fileName = "kokomi_1";
+                path = Path.Combine(Program.Folder, "screenshots", "default", "backgrounds", $"{fileName}.png");
+                _bgInt = 0;
+            }
+
             BackgroundImage = new Bitmap(path);
+
             Log.Output($"Changed app background to '{path}'. ID: {_bgInt}");
         }
 
@@ -207,7 +214,7 @@ namespace Genshin_Impact_Mod.Forms
                     return 1;
                 }
 
-                updates_Label.Text = @"Check for updates";
+                updates_Label.Text = "Check for updates";
                 update_Icon.Image = Resources.icons8_available_updates;
 
                 Log.Output($"Not found any new updates. Your installed version: v{Program.AppVersion}");
@@ -217,7 +224,7 @@ namespace Genshin_Impact_Mod.Forms
             catch (Exception e)
             {
                 updates_Label.LinkColor = Color.Red;
-                updates_Label.Text = @"Ohh, something went wrong";
+                updates_Label.Text = "Ohh, something went wrong";
                 status_Label.Text += $"[x] {e.Message}\n";
 
                 Log.ErrorAuditLog(new Exception($"Something went wrong while checking for new updates.\n\n{e}"));
@@ -303,30 +310,38 @@ namespace Genshin_Impact_Mod.Forms
 
         private void AnimeGirl1_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(@"(^o.o^) ugh??", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Question);
+            MessageBox.Show("(^o.o^) ugh??", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
 
         private void AnimeGirl2_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(@"ฅ^˙Ⱉ˙^ฅ rawr!", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("ฅ^˙Ⱉ˙^ฅ rawr!", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private async void AnimeGirl3_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(@"(^=_=^)", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("(^=_=^)", Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            var client = new WebClient();
-            client.Headers.Add("user-agent", Program.UserAgent);
-            var json = await client.DownloadStringTaskAsync("https://api.alexflipnote.dev/sadcat");
-            var res = JsonConvert.DeserializeObject<AlexflipnoteApi>(json);
+            try
+            {
+                var client = new WebClient();
+                client.Headers.Add("user-agent", Program.UserAgent);
+                var json = await client.DownloadStringTaskAsync("https://api.alexflipnote.dev/sadcat");
+                var res = JsonConvert.DeserializeObject<AlexflipnoteApi>(json);
 
-            Utils.OpenUrl(res.File);
+                Utils.OpenUrl(res.File);
+                Log.Output($"GET https://api.alexflipnote.dev/sadcat - {res.File}");
+            }
+            catch (Exception ex)
+            {
+                Log.ErrorAuditLog(ex);
+            }
         }
 
         // ------- Start the game -------
         private async void StartGame_Click(object sender, EventArgs e)
         {
-            using (var sw = File.CreateText(LaunchModeFile))
+            using (var sw = new StreamWriter(LaunchModeFile))
             {
                 await sw.WriteAsync("1");
             }
@@ -336,7 +351,7 @@ namespace Genshin_Impact_Mod.Forms
 
         private async void OnlyReShade_Click(object sender, EventArgs e)
         {
-            using (var sw = File.CreateText(LaunchModeFile))
+            using (var sw = new StreamWriter(LaunchModeFile))
             {
                 await sw.WriteAsync("2");
             }
@@ -350,7 +365,7 @@ namespace Genshin_Impact_Mod.Forms
 
         private async void OnlyUnlocker_Click(object sender, EventArgs e)
         {
-            using (var sw = File.CreateText(LaunchModeFile))
+            using (var sw = new StreamWriter(LaunchModeFile))
             {
                 await sw.WriteAsync("3");
             }
@@ -389,28 +404,20 @@ namespace Genshin_Impact_Mod.Forms
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            var frm = new Tools
-                { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 };
-            if (Application.OpenForms.OfType<Tools>().Count() == 1)
-                Application.OpenForms.OfType<Tools>().First().Close();
-            frm.Show();
+            Application.OpenForms.OfType<Tools>().FirstOrDefault()?.Close();
+            new Tools { Location = Location, Icon = Resources.icon_52x52 }.Show();
         }
 
         private void TutorialHelp_Click(object sender, EventArgs e)
         {
-            var frm = new Tutorial
-                { Location = Location, StartPosition = FormStartPosition.Manual, Icon = Resources.icon_52x52 };
-            if (Application.OpenForms.OfType<Tutorial>().Count() == 1)
-                Application.OpenForms.OfType<Tutorial>().First().Close();
-            frm.Show();
+            Application.OpenForms.OfType<Tutorial>().FirstOrDefault()?.Close();
+            new Tutorial { Location = Location, Icon = Resources.icon_52x52 }.Show();
         }
 
         private void URLs_Click(object sender, EventArgs e)
         {
-            var frm = new Links { Location = Location, Icon = Resources.icon_52x52 };
-            if (Application.OpenForms.OfType<Links>().Count() == 1)
-                Application.OpenForms.OfType<Links>().First().Close();
-            frm.Show();
+            Application.OpenForms.OfType<Links>().FirstOrDefault()?.Close();
+            new Links { Location = Location, Icon = Resources.icon_52x52 }.Show();
         }
 
         private void Website_Click(object sender, EventArgs e)
@@ -421,6 +428,18 @@ namespace Genshin_Impact_Mod.Forms
         private void Version_Click(object sender, EventArgs e)
         {
             Utils.OpenUrl("https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/CHANGELOG.md");
+        }
+
+        private void Beta_Click(object sender, EventArgs e)
+        {
+            Utils.OpenUrl("https://www.youtube.com/watch?v=VzdQ6eFWeR0");
+        }
+
+        private void MadeBySefinek_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(@"It's just text. What more do you want?", Program.AppName, MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
+            Utils.OpenUrl("https://www.youtube.com/watch?v=FJVRE-CNafU");
         }
 
         private async void CheckUpdates_Click(object sender, EventArgs e)
@@ -441,20 +460,20 @@ namespace Genshin_Impact_Mod.Forms
             updates_Label.Text = @"Updating. Please wait...";
             Utils.RemoveClickEvent(updates_Label);
 
+            progressBar1.Show();
+            label3.Show();
+
+            pictureBox3.Hide();
+            settings_Label.Hide();
+            pictureBox6.Hide();
+            createShortcut_Label.Hide();
+            pictureBox11.Hide();
+            linkLabel5.Hide();
+            pictureBox4.Hide();
+            website_Label.Hide();
+
             try
             {
-                progressBar1.Show();
-                label3.Show();
-
-                pictureBox3.Hide();
-                settings_Label.Hide();
-                pictureBox6.Hide();
-                createShortcut_Label.Hide();
-                pictureBox11.Hide();
-                linkLabel5.Hide();
-                pictureBox4.Hide();
-                website_Label.Hide();
-
                 StartDownload();
             }
             catch (Exception ex)
@@ -471,33 +490,37 @@ namespace Genshin_Impact_Mod.Forms
                 status_Label.Text += "[i] Deleted old setup file from temp directory.\n";
             }
 
-            var thread = new Thread(() =>
-            {
-                var client = new WebClient();
-                client.Headers.Add("user-agent", Program.UserAgent);
-                client.DownloadProgressChanged += Client_DownloadProgressChanged;
-                client.DownloadFileCompleted += Client_DownloadFileCompleted;
-                client.DownloadFileAsync(
-                    new Uri("https://cdn.sefinek.net/resources/genshin-impact-reshade/launcher/download.exe"),
-                    SetupPathExe);
-            });
-            thread.Start();
+            var client = new WebClient();
+            client.Headers.Add("user-agent", Program.UserAgent);
+            client.DownloadProgressChanged += Client_DownloadProgressChanged;
+            client.DownloadFileCompleted += Client_DownloadFileCompleted;
+            client.DownloadFileAsync(
+                new Uri("https://cdn.sefinek.net/resources/genshin-impact-reshade/launcher/download.exe"),
+                SetupPathExe);
         }
 
         private void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            BeginInvoke((MethodInvoker)delegate
+            BeginInvoke((MethodInvoker)(() =>
             {
-                var bytesIn = double.Parse(e.BytesReceived.ToString());
-                var totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
-
-                var data = int.Parse(Math.Truncate(bytesIn / totalBytes * 100).ToString(CultureInfo.InvariantCulture));
-                progressBar1.Value = data;
-                TaskbarManager.Instance.SetProgressValue(data, 100);
+                var progress = e.TotalBytesToReceive > 0
+                    ? (int)Math.Floor(e.BytesReceived / (double)e.TotalBytesToReceive * 100)
+                    : 0;
+                progressBar1.Value = progress;
+                TaskbarManager.Instance.SetProgressValue(progress, 100);
 
                 label3.Text =
                     $"📥 Downloading... {ByteSize.FromBytes(e.BytesReceived).MegaBytes:00.00} MB of {ByteSize.FromBytes(e.TotalBytesToReceive).MegaBytes:000.00} MB";
-            });
+            }));
+        }
+
+        private void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            BeginInvoke((Action)(() =>
+            {
+                RunSetup();
+                label3.Text = "✔ Successfully! Now it's time to install.";
+            }));
         }
 
         private async void RunSetup()
@@ -508,6 +531,7 @@ namespace Genshin_Impact_Mod.Forms
             var date = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
             await Cmd.Execute(SetupPathExe, $"/UPDATE /NORESTART /LOG=\"{Log.Folder}\\updates\\{date}.log\"", null,
                 false, true, true);
+
             TaskbarManager.Instance.SetProgressValue(100, 100);
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Paused);
 
@@ -517,27 +541,11 @@ namespace Genshin_Impact_Mod.Forms
             updates_Label.Click += CheckUpdates_Click;
         }
 
-        private void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
-        {
-            BeginInvoke((MethodInvoker)delegate
-            {
-                RunSetup();
-
-                label3.Text = "✔ Successfully! Now it's time to install.";
-            });
-        }
-
         private void Paimon_Click(object sender, EventArgs e)
         {
-            var frm = new RandomThings { Location = Location, Icon = Resources.icon_52x52 };
-            if (Application.OpenForms.OfType<RandomThings>().Count() == 1)
-                Application.OpenForms.OfType<RandomThings>().First().Close();
-            frm.Show();
-        }
-
-        private void Beta_Click(object sender, EventArgs e)
-        {
-            Utils.OpenUrl("https://www.youtube.com/watch?v=VzdQ6eFWeR0");
+            if (Application.OpenForms.OfType<RandomThings>().FirstOrDefault() != null) return;
+            var randomThingsForm = new RandomThings { Location = Location, Icon = Resources.icon_52x52 };
+            randomThingsForm.Show();
         }
     }
 }

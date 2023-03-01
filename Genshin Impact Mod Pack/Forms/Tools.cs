@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
@@ -159,6 +160,11 @@ namespace Genshin_Impact_Mod.Forms
         private async void InstallationErrorLog_Button(object sender, EventArgs e)
         {
             await Cmd.Execute("notepad", $@"{Log.Folder}\installer.error.log", null, false, true, false);
+        }
+
+        private void Notepad_Click(object sender, EventArgs e)
+        {
+            Process.Start($@"{Directory.GetCurrentDirectory()}\data\poland-strong.mp4");
         }
     }
 }

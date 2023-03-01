@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -41,7 +42,7 @@ namespace Genshin_Impact_Mod.Scripts
 
                 case "giExe":
                 {
-                    var genshinImpactExeMain = $@"{gameDir}\GenshinImpact.exe";
+                    var genshinImpactExeMain = $@"{gameDir}\Genshin Impact game\GenshinImpact.exe";
                     if (File.Exists(genshinImpactExeMain))
                     {
                         Log.Output($"Found GenshinImpact.exe in: {genshinImpactExeMain} [giExe]");
@@ -52,7 +53,7 @@ namespace Genshin_Impact_Mod.Scripts
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Log.Output($"File does not exists in: {genshinImpactExeMain} [giExe]");
 
-                    var genshinImpactExeYuanShen = $@"{gameDir}\YuanShen.exe";
+                    var genshinImpactExeYuanShen = $@"{gameDir}\Genshin Impact game\YuanShen.exe";
                     if (File.Exists(genshinImpactExeYuanShen))
                     {
                         Log.Output($"Found GenshinImpact.exe in: {genshinImpactExeMain} [giExe]");
@@ -68,17 +69,8 @@ namespace Genshin_Impact_Mod.Scripts
 
                 case "giLauncher":
                 {
-                    var mainDir = Directory.GetParent(gameDir)?.FullName;
-                    if (!Directory.Exists(mainDir))
-                    {
-                        MessageBox.Show($"Directory does not exists.\n{mainDir}", Program.AppName, MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-                        Log.Output($"Directory does not exists in: {mainDir} [giLauncher]");
-                        return null;
-                    }
-
-                    var genshinImpactExe = $@"{mainDir}\launcher.exe";
-                    if (!File.Exists(genshinImpactExe) || !File.Exists(genshinImpactExe))
+                    var genshinImpactExe = $@"{gameDir}\launcher.exe";
+                    if (!File.Exists(genshinImpactExe))
                     {
                         MessageBox.Show($"Launcher file does not exists.\n{genshinImpactExe}", Program.AppName,
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -91,25 +83,42 @@ namespace Genshin_Impact_Mod.Scripts
                 }
 
                 default:
+                {
+                    Log.Error(new Exception("Wrong parameter."));
                     return null;
+                }
             }
         }
 
         public static void OpenUrl(string url)
         {
-            Process.Start(url);
-            Log.Output($"Opened '{url}' in default browser.");
+            if (string.IsNullOrEmpty(url))
+            {
+                Log.Error(new Exception("URL is null or empty."));
+                return;
+            }
+
+            try
+            {
+                Process.Start(url);
+                Log.Output($"Opened '{url}' in default browser.");
+            }
+            catch (Exception ex)
+            {
+                Log.Error(new Exception($"Failed to open '{url}' in default browser.\n{ex}"));
+            }
         }
 
-        public static void RemoveClickEvent(Label b)
+        public static void RemoveClickEvent(Label button)
         {
-            var f1 = typeof(Control).GetField("EventClick", BindingFlags.Static | BindingFlags.NonPublic);
+            var eventClickField = typeof(Control).GetField("EventClick", BindingFlags.Static | BindingFlags.NonPublic);
+            var eventHandler = eventClickField?.GetValue(button);
+            if (eventHandler == null) return;
 
-            var obj = f1?.GetValue(b);
-            var pi = b.GetType().GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Instance);
+            var eventsProperty = button.GetType().GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Instance);
+            var eventHandlerList = (EventHandlerList)eventsProperty?.GetValue(button, null);
 
-            var list = (EventHandlerList)pi?.GetValue(b, null);
-            list?.RemoveHandler(obj, list[obj]);
+            eventHandlerList?.RemoveHandler(eventHandler, eventHandlerList[eventHandler]);
         }
     }
 }

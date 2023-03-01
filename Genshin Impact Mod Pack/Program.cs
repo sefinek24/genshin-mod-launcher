@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Reflection;
 using System.Windows.Forms;
 using Genshin_Impact_Mod.Forms;
@@ -47,15 +48,17 @@ namespace Genshin_Impact_Mod
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (RegionInfo.CurrentRegion.Name == "RU")
-            {
-                new WrongCountry { Icon = Resources.icon_52x52 }.ShowDialog();
-
-                Environment.Exit(0);
-            }
-
             if ((Environment.CurrentDirectory != Folder) & !Debugger.IsAttached)
             {
+                try
+                {
+                    new SoundPlayer { SoundLocation = @"data\dzwieki-z-pornola.wav" }.Play();
+                }
+                catch (Exception e)
+                {
+                    Log.ErrorAuditLog(e);
+                }
+
                 new WrongDirectory { Icon = Resources.icon_52x52 }.ShowDialog();
 
                 Environment.Exit(0);
@@ -63,6 +66,15 @@ namespace Genshin_Impact_Mod
 
             if (!File.Exists(InstalledViaSetup))
             {
+                try
+                {
+                    new SoundPlayer { SoundLocation = @"data\dzwieki-z-pornola.wav" }.Play(); // a degenerata kij w dupe
+                }
+                catch (Exception e)
+                {
+                    Log.ErrorAuditLog(e);
+                }
+
                 new NotInstalledViaSetup { Icon = Resources.icon_52x52 }.ShowDialog();
 
                 Environment.Exit(0);
@@ -79,6 +91,22 @@ namespace Genshin_Impact_Mod
                 Environment.Exit(0);
             }
 
+            if (RegionInfo.CurrentRegion.Name == "RU")
+            {
+                try
+                {
+                    new SoundPlayer { SoundLocation = @"data\kurwa.wav" }.Play();
+                }
+                catch (Exception e)
+                {
+                    Log.ErrorAuditLog(e);
+                }
+
+                new WrongCountry { Icon = Resources.icon_52x52 }.ShowDialog();
+
+                Environment.Exit(0);
+            }
+
 
             try
             {
@@ -88,24 +116,28 @@ namespace Genshin_Impact_Mod
                         lcfWriter.Write("0");
                     }
 
-
                 if (!File.Exists(TierActivated) && Directory.Exists(PatronsDir)) Directory.Delete(PatronsDir, true);
 
-                var number = int.Parse(File.ReadAllLines(LaunchCountFile).First()) + 1;
+                var lines = File.ReadAllLines(LaunchCountFile);
+                var number = 0;
+                if (lines.Length > 0) int.TryParse(lines[0], out number);
+
+                number++;
                 LaunchCountGlobal = number;
-                using (var sw = File.CreateText(LaunchCountFile))
+
+                using (var sw = new StreamWriter(LaunchCountFile))
                 {
                     sw.Write(number);
                 }
 
                 switch (number)
                 {
-                    case 2:
+                    case 3:
                     case 10:
-                    case 15:
-                        var discordResult = MessageBox.Show("Do you want join to our Discord server?", AppName,
+                    case 18:
+                        var discordResult = MessageBox.Show("Do you want to join our Discord server?", AppName,
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        Log.Output("Question (MessageBox): Do you want join to our Discord server?");
+                        Log.Output("Question (MessageBox): Do you want to join our Discord server?");
 
                         if (discordResult == DialogResult.Yes)
                         {
@@ -119,11 +151,12 @@ namespace Genshin_Impact_Mod
 
                         break;
 
-                    case 4:
+                    case 6:
                     case 20:
                     case 42:
                     case 63:
                         if (!File.Exists(TierActivated)) Application.Run(new SupportMe { Icon = Resources.icon_52x52 });
+
                         return;
 
                     case 26:

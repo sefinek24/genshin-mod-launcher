@@ -221,6 +221,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\kurwa.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\dzwieki-z-pornola.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\gengbeng.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\poland-strong.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\IMG_20220810_133130-1-1.png" />
     <None Include="Resources\received_1648838532122759.jpeg" />
     <None Include="Resources\kokomi_2.png" />
@@ -242,6 +254,9 @@
     <None Include="Resources\poland %281%29.png" />
     <None Include="Resources\united-kingdom %282%29.png" />
     <None Include="Resources\icons8-info-squared-96.png" />
+    <Content Include="Data\go-crazy.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\music.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

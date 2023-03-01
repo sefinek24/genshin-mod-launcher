@@ -1,5 +1,7 @@
 using System;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
@@ -21,6 +23,8 @@ namespace Genshin_Impact_Mod.Forms.Other
             InitializeComponent();
 
             webView21.DefaultBackgroundColor = Color.Transparent;
+
+            if (RegionInfo.CurrentRegion.Name == "PL") linkLabel46.Visible = true;
         }
 
         private async void RandomImg_Shown(object sender, EventArgs e)
@@ -87,7 +91,7 @@ namespace Genshin_Impact_Mod.Forms.Other
                 $"Received data from api.sefinek.net: {res.Success} {res.Status} {res.Category} {res.Endpoint} {res.Message}");
         }
 
-        private async void NekosBest(string url, bool gif)
+        private async void NekosBest(string url, bool gif) // The best api uwu
         {
             var json = await GetData(url);
             if (json == null) return;
@@ -385,6 +389,11 @@ namespace Genshin_Impact_Mod.Forms.Other
         private void Source_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(_sourceUrl)) Utils.OpenUrl(_sourceUrl);
+        }
+
+        private void RandomHentai_Click(object sender, EventArgs e)
+        {
+            webView21.CoreWebView2.Navigate($@"{Directory.GetCurrentDirectory()}\data\gengbeng.mp4");
         }
     }
 }
