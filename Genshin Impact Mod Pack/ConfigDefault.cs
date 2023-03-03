@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace Genshin_Impact_Mod
+namespace Genshin_Stella_Mod
 {
     internal abstract class ConfigDefault
     {

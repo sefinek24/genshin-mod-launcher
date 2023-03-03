@@ -1,4 +1,4 @@
-﻿namespace Genshin_Impact_Mod.Forms
+﻿namespace Genshin_Stella_Mod.Forms
 {
     sealed partial class Tutorial
     {
@@ -49,9 +49,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // panel2
-            // 
+            //
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -63,9 +63,9 @@
             this.panel2.TabIndex = 76;
             this.toolTip1.SetToolTip(this.panel2, "Close");
             this.panel2.Click += new System.EventHandler(this.Exit_Click);
-            // 
+            //
             // panel1
-            // 
+            //
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.panel2);
@@ -79,9 +79,9 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
-            // 
+            //
             // linkLabel1
-            // 
+            //
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel1.AutoSize = true;
@@ -98,9 +98,9 @@
             this.linkLabel1.Text = "Open in browser";
             this.toolTip1.SetToolTip(this.linkLabel1, "View tutorial in default web browser.");
             this.linkLabel1.Click += new System.EventHandler(this.ViewInBrowser_Click);
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
@@ -112,14 +112,14 @@
             this.label1.Text = "If you have any problems or suggestions, join to my Discord server.\r\nThank you fo" +
     "r using this software. Enjoy.\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // pictureBox1
-            // 
+            //
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Genshin_Impact_Mod.Properties.Resources.youtube_video;
+            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.youtube_video;
             this.pictureBox1.Location = new System.Drawing.Point(26, 54);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(600, 338);
@@ -127,9 +127,9 @@
             this.pictureBox1.TabIndex = 94;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.ViewInBrowser_Click);
-            // 
+            //
             // linkLabel2
-            // 
+            //
             this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
@@ -146,9 +146,9 @@
             this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip1.SetToolTip(this.linkLabel2, "Join to my Discord server.");
             this.linkLabel2.Click += new System.EventHandler(this.Discord_Button);
-            // 
+            //
             // linkLabel3
-            // 
+            //
             this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
@@ -165,9 +165,9 @@
             this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolTip1.SetToolTip(this.linkLabel3, "Check official website.");
             this.linkLabel3.Click += new System.EventHandler(this.Website_Button);
-            // 
+            //
             // linkLabel4
-            // 
+            //
             this.linkLabel4.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
@@ -184,9 +184,9 @@
             this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip1.SetToolTip(this.linkLabel4, "Check screenshots.");
             this.linkLabel4.Click += new System.EventHandler(this.Gallery_Button);
-            // 
+            //
             // label2
-            // 
+            //
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Cursor = System.Windows.Forms.Cursors.Help;
@@ -199,13 +199,13 @@
             this.label2.Text = "Creator: Sefinek#0001";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip1.SetToolTip(this.label2, "Discord username");
-            // 
+            //
             // pictureBox3
-            // 
+            //
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox3.Image = global::Genshin_Impact_Mod.Properties.Resources.uk_flag;
+            this.pictureBox3.Image = global::Genshin_Stella_Mod.Properties.Resources.uk_flag;
             this.pictureBox3.Location = new System.Drawing.Point(333, 533);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
@@ -213,13 +213,13 @@
             this.pictureBox3.TabIndex = 100;
             this.pictureBox3.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox3, "English");
-            // 
+            //
             // pictureBox2
-            // 
+            //
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox2.Image = global::Genshin_Impact_Mod.Properties.Resources.poland_flag;
+            this.pictureBox2.Image = global::Genshin_Stella_Mod.Properties.Resources.poland_flag;
             this.pictureBox2.Location = new System.Drawing.Point(281, 533);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
@@ -228,9 +228,9 @@
             this.pictureBox2.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox2, "Polish\r\n\r\n--\r\nŁaaał, polak stworzył coś takiego. Kurwa nie możliwe.\r\nChwała Jezus" +
         "owi Chrystusowi a degeneracji kij w oko.");
-            // 
+            //
             // label3
-            // 
+            //
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -244,9 +244,9 @@
             this.label3.Text = "This video is outdated";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip1.SetToolTip(this.label3, "Discord username");
-            // 
+            //
             // webView21
-            // 
+            //
             this.webView21.AllowExternalDrop = true;
             this.webView21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.webView21.BackColor = System.Drawing.Color.Black;
@@ -258,12 +258,12 @@
             this.webView21.Size = new System.Drawing.Size(600, 338);
             this.webView21.TabIndex = 101;
             this.webView21.ZoomFactor = 1D;
-            // 
+            //
             // Tutorial
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Genshin_Impact_Mod.Properties.Resources.tutorial;
+            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.tutorial;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1032, 579);
             this.Controls.Add(this.label3);

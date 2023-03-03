@@ -1,4 +1,4 @@
-﻿namespace Genshin_Impact_Mod.Forms.Other
+﻿namespace Genshin_Stella_Mod.Forms.Other
 {
     partial class Gallery
     {
@@ -31,9 +31,9 @@
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // webView21
-            // 
+            //
             this.webView21.AllowExternalDrop = true;
             this.webView21.BackColor = System.Drawing.Color.Black;
             this.webView21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -46,9 +46,9 @@
             this.webView21.Size = new System.Drawing.Size(1239, 744);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
-            // 
+            //
             // Gallery
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1239, 744);

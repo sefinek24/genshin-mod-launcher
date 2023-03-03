@@ -1,9 +1,9 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Scripts;
 
-namespace Genshin_Impact_Mod.Forms.Errors
+namespace Genshin_Stella_Mod.Forms.Errors
 {
     public partial class NotInstalledViaSetup : Form
     {

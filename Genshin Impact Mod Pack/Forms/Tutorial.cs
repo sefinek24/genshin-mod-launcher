@@ -2,12 +2,12 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Genshin_Impact_Mod.Forms.Other;
-using Genshin_Impact_Mod.Properties;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Forms.Other;
+using Genshin_Stella_Mod.Properties;
+using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
 
-namespace Genshin_Impact_Mod.Forms
+namespace Genshin_Stella_Mod.Forms
 {
     public partial class Tutorial : Form
     {

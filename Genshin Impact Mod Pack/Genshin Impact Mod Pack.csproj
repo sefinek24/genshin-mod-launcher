@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A9DDC941-CB15-4B3C-8BA1-8F559F70480D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Genshin_Impact_Mod</RootNamespace>
-    <AssemblyName>Genshin Impact Mod Launcher</AssemblyName>
+    <RootNamespace>Genshin_Stella_Mod</RootNamespace>
+    <AssemblyName>Genshin Stella Mod Launcher</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Genshin_Impact_Mod.Program</StartupObject>
+    <StartupObject>Genshin_Stella_Mod.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\52x52.ico</ApplicationIcon>
@@ -221,16 +221,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\kurwa.wav">
+    <Content Include="data\kurwa.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\dzwieki-z-pornola.wav">
+    <Content Include="data\dzwieki-z-pornola.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\gengbeng.mp4">
+    <Content Include="data\gengbeng.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\poland-strong.mp4">
+    <Content Include="data\poland-strong.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\IMG_20220810_133130-1-1.png" />
@@ -254,10 +254,10 @@
     <None Include="Resources\poland %281%29.png" />
     <None Include="Resources\united-kingdom %282%29.png" />
     <None Include="Resources\icons8-info-squared-96.png" />
-    <Content Include="Data\go-crazy.wav">
+    <Content Include="data\go-crazy.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\music.wav">
+    <Content Include="data\music.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\icons8-gear-94.png" />

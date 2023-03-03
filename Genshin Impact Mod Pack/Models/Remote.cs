@@ -1,4 +1,4 @@
-namespace Genshin_Impact_Mod.Models
+namespace Genshin_Stella_Mod.Models
 {
     public class LauncherApi
     {

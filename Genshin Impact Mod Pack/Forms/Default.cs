@@ -9,11 +9,11 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByteSizeLib;
-using Genshin_Impact_Mod.Forms.Errors;
-using Genshin_Impact_Mod.Forms.Other;
-using Genshin_Impact_Mod.Models;
-using Genshin_Impact_Mod.Properties;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Forms.Errors;
+using Genshin_Stella_Mod.Forms.Other;
+using Genshin_Stella_Mod.Models;
+using Genshin_Stella_Mod.Properties;
+using Genshin_Stella_Mod.Scripts;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using Newtonsoft.Json;
@@ -22,12 +22,12 @@ using Newtonsoft.Json;
 // 2 = ReShade
 // 3 = FPS Unlocker
 
-namespace Genshin_Impact_Mod.Forms
+namespace Genshin_Stella_Mod.Forms
 {
     public partial class Default : Form
     {
         private static readonly string LaunchModeFile = $@"{Program.AppData}\launch-mode.sfn";
-        private static readonly string SetupPathExe = $"{Path.GetTempPath()}Genshin_Impact_Mod_Setup.exe";
+        private static readonly string SetupPathExe = $"{Path.GetTempPath()}Genshin_Stella_Mod_Setup.exe";
         public static bool UpdateIsAvailable;
         private int _bgInt;
 

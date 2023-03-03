@@ -1,4 +1,4 @@
-﻿namespace Genshin_Impact_Mod.Forms.Errors
+﻿namespace Genshin_Stella_Mod.Forms.Errors
 {
 	partial class WrongCountry
 	{
@@ -30,10 +30,10 @@
 		{
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
+            //
             // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Alef", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -44,12 +44,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Russian cunt xD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // WrongCountry
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Genshin_Impact_Mod.Properties.Resources.IMG_20220810_133130_1_1;
+            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.IMG_20220810_133130_1_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(507, 556);
             this.Controls.Add(this.label1);

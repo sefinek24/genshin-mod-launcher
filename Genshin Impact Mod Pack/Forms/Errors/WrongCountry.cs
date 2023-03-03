@@ -1,9 +1,9 @@
 using System;
 using System.Windows.Forms;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Scripts;
 using Microsoft.Toolkit.Uwp.Notifications;
 
-namespace Genshin_Impact_Mod.Forms.Errors
+namespace Genshin_Stella_Mod.Forms.Errors
 {
     public partial class WrongCountry : Form
     {

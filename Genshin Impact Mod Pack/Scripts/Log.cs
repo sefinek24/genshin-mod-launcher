@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using Genshin_Impact_Mod.Forms.Errors;
-using Genshin_Impact_Mod.Properties;
+using Genshin_Stella_Mod.Forms.Errors;
+using Genshin_Stella_Mod.Properties;
 
-namespace Genshin_Impact_Mod.Scripts
+namespace Genshin_Stella_Mod.Scripts
 {
     internal abstract class Log
     {

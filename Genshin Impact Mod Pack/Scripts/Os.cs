@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using Microsoft.Win32;
 
-namespace Genshin_Impact_Mod.Scripts
+namespace Genshin_Stella_Mod.Scripts
 {
     internal abstract class Os
     {

@@ -1,4 +1,4 @@
-﻿namespace Genshin_Impact_Mod.Forms.Other
+﻿namespace Genshin_Stella_Mod.Forms.Other
 {
     partial class RandomThings
     {
@@ -82,9 +82,9 @@
             this.linkLabel46 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // linkLabel1
-            // 
+            //
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel1.AutoSize = true;
@@ -100,9 +100,9 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Cat";
             this.linkLabel1.Click += new System.EventHandler(this.RandomCat_Click);
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
@@ -113,9 +113,9 @@
             this.label1.Size = new System.Drawing.Size(236, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "» Random animals";
-            // 
+            //
             // linkLabel2
-            // 
+            //
             this.linkLabel2.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.AutoSize = true;
@@ -131,9 +131,9 @@
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Dog";
             this.linkLabel2.Click += new System.EventHandler(this.RandomDog_Click);
-            // 
+            //
             // linkLabel3
-            // 
+            //
             this.linkLabel3.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel3.AutoSize = true;
@@ -149,9 +149,9 @@
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Fox";
             this.linkLabel3.Click += new System.EventHandler(this.RandomFox_Click);
-            // 
+            //
             // label2
-            // 
+            //
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
@@ -162,9 +162,9 @@
             this.label2.Size = new System.Drawing.Size(319, 38);
             this.label2.TabIndex = 5;
             this.label2.Text = "» Random anime bitches";
-            // 
+            //
             // linkLabel4
-            // 
+            //
             this.linkLabel4.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel4.AutoSize = true;
@@ -180,9 +180,9 @@
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Senko";
             this.linkLabel4.Click += new System.EventHandler(this.Senko_Click);
-            // 
+            //
             // linkLabel5
-            // 
+            //
             this.linkLabel5.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel5.AutoSize = true;
@@ -198,9 +198,9 @@
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Fox girl";
             this.linkLabel5.Click += new System.EventHandler(this.FoxGirl_Click);
-            // 
+            //
             // linkLabel6
-            // 
+            //
             this.linkLabel6.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel6.AutoSize = true;
@@ -216,9 +216,9 @@
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Cat girl";
             this.linkLabel6.Click += new System.EventHandler(this.CatGirl_Click);
-            // 
+            //
             // linkLabel7
-            // 
+            //
             this.linkLabel7.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel7.AutoSize = true;
@@ -234,9 +234,9 @@
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Text = "Coffee";
             this.linkLabel7.Click += new System.EventHandler(this.Coffee_Click);
-            // 
+            //
             // text_Label
-            // 
+            //
             this.text_Label.ActiveLinkColor = System.Drawing.Color.MediumBlue;
             this.text_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.text_Label.BackColor = System.Drawing.Color.Transparent;
@@ -249,9 +249,9 @@
             this.text_Label.TabIndex = 10;
             this.text_Label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.text_Label.Click += new System.EventHandler(this.Source_Click);
-            // 
+            //
             // label3
-            // 
+            //
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -262,9 +262,9 @@
             this.label3.Size = new System.Drawing.Size(273, 38);
             this.label3.TabIndex = 11;
             this.label3.Text = "» Random anime gifs";
-            // 
+            //
             // linkLabel8
-            // 
+            //
             this.linkLabel8.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel8.AutoSize = true;
@@ -280,9 +280,9 @@
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "Hug";
             this.linkLabel8.Click += new System.EventHandler(this.Hug_Click);
-            // 
+            //
             // linkLabel9
-            // 
+            //
             this.linkLabel9.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel9.AutoSize = true;
@@ -298,9 +298,9 @@
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "Happy";
             this.linkLabel9.Click += new System.EventHandler(this.Happy_Click);
-            // 
+            //
             // linkLabel10
-            // 
+            //
             this.linkLabel10.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel10.AutoSize = true;
@@ -316,9 +316,9 @@
             this.linkLabel10.TabStop = true;
             this.linkLabel10.Text = "Pat";
             this.linkLabel10.Click += new System.EventHandler(this.Pat_Click);
-            // 
+            //
             // linkLabel11
-            // 
+            //
             this.linkLabel11.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel11.AutoSize = true;
@@ -334,9 +334,9 @@
             this.linkLabel11.TabStop = true;
             this.linkLabel11.Text = "Wink";
             this.linkLabel11.Click += new System.EventHandler(this.Wink_Click);
-            // 
+            //
             // linkLabel12
-            // 
+            //
             this.linkLabel12.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel12.AutoSize = true;
@@ -352,9 +352,9 @@
             this.linkLabel12.TabStop = true;
             this.linkLabel12.Text = "Cry";
             this.linkLabel12.Click += new System.EventHandler(this.Cry_Click);
-            // 
+            //
             // linkLabel13
-            // 
+            //
             this.linkLabel13.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel13.AutoSize = true;
@@ -370,9 +370,9 @@
             this.linkLabel13.TabStop = true;
             this.linkLabel13.Text = "Wave";
             this.linkLabel13.Click += new System.EventHandler(this.Wave_Click);
-            // 
+            //
             // linkLabel14
-            // 
+            //
             this.linkLabel14.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel14.AutoSize = true;
@@ -388,9 +388,9 @@
             this.linkLabel14.TabStop = true;
             this.linkLabel14.Text = "Thumbsup";
             this.linkLabel14.Click += new System.EventHandler(this.Thumbsup_Click);
-            // 
+            //
             // linkLabel15
-            // 
+            //
             this.linkLabel15.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel15.AutoSize = true;
@@ -406,9 +406,9 @@
             this.linkLabel15.TabStop = true;
             this.linkLabel15.Text = "Kiss";
             this.linkLabel15.Click += new System.EventHandler(this.Kiss_Click);
-            // 
+            //
             // linkLabel16
-            // 
+            //
             this.linkLabel16.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel16.AutoSize = true;
@@ -424,9 +424,9 @@
             this.linkLabel16.TabStop = true;
             this.linkLabel16.Text = "Cuddle";
             this.linkLabel16.Click += new System.EventHandler(this.Cuddle_Click);
-            // 
+            //
             // linkLabel17
-            // 
+            //
             this.linkLabel17.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel17.AutoSize = true;
@@ -442,9 +442,9 @@
             this.linkLabel17.TabStop = true;
             this.linkLabel17.Text = "Smile";
             this.linkLabel17.Click += new System.EventHandler(this.Smile_Click);
-            // 
+            //
             // linkLabel18
-            // 
+            //
             this.linkLabel18.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel18.AutoSize = true;
@@ -460,9 +460,9 @@
             this.linkLabel18.TabStop = true;
             this.linkLabel18.Text = "Sleep";
             this.linkLabel18.Click += new System.EventHandler(this.Sleep_Click);
-            // 
+            //
             // linkLabel20
-            // 
+            //
             this.linkLabel20.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel20.AutoSize = true;
@@ -478,9 +478,9 @@
             this.linkLabel20.TabStop = true;
             this.linkLabel20.Text = "Blush";
             this.linkLabel20.Click += new System.EventHandler(this.Blush_Click);
-            // 
+            //
             // linkLabel19
-            // 
+            //
             this.linkLabel19.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel19.AutoSize = true;
@@ -496,9 +496,9 @@
             this.linkLabel19.TabStop = true;
             this.linkLabel19.Text = "Laugh";
             this.linkLabel19.Click += new System.EventHandler(this.Laugh_Click);
-            // 
+            //
             // linkLabel21
-            // 
+            //
             this.linkLabel21.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel21.AutoSize = true;
@@ -514,9 +514,9 @@
             this.linkLabel21.TabStop = true;
             this.linkLabel21.Text = "Shoot";
             this.linkLabel21.Click += new System.EventHandler(this.Shoot_Click);
-            // 
+            //
             // linkLabel22
-            // 
+            //
             this.linkLabel22.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel22.AutoSize = true;
@@ -532,9 +532,9 @@
             this.linkLabel22.TabStop = true;
             this.linkLabel22.Text = "Waifu";
             this.linkLabel22.Click += new System.EventHandler(this.Waifu_Click);
-            // 
+            //
             // linkLabel23
-            // 
+            //
             this.linkLabel23.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel23.AutoSize = true;
@@ -550,9 +550,9 @@
             this.linkLabel23.TabStop = true;
             this.linkLabel23.Text = "Baka";
             this.linkLabel23.Click += new System.EventHandler(this.Baka_Click);
-            // 
+            //
             // linkLabel24
-            // 
+            //
             this.linkLabel24.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel24.AutoSize = true;
@@ -568,9 +568,9 @@
             this.linkLabel24.TabStop = true;
             this.linkLabel24.Text = "Bite";
             this.linkLabel24.Click += new System.EventHandler(this.Bite_Click);
-            // 
+            //
             // linkLabel25
-            // 
+            //
             this.linkLabel25.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel25.AutoSize = true;
@@ -586,9 +586,9 @@
             this.linkLabel25.TabStop = true;
             this.linkLabel25.Text = "Bored";
             this.linkLabel25.Click += new System.EventHandler(this.Bored_Click);
-            // 
+            //
             // linkLabel26
-            // 
+            //
             this.linkLabel26.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel26.AutoSize = true;
@@ -604,9 +604,9 @@
             this.linkLabel26.TabStop = true;
             this.linkLabel26.Text = "Dance";
             this.linkLabel26.Click += new System.EventHandler(this.Dance_Click);
-            // 
+            //
             // linkLabel27
-            // 
+            //
             this.linkLabel27.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel27.AutoSize = true;
@@ -622,9 +622,9 @@
             this.linkLabel27.TabStop = true;
             this.linkLabel27.Text = "Face palm";
             this.linkLabel27.Click += new System.EventHandler(this.FacePalm_Click);
-            // 
+            //
             // linkLabel28
-            // 
+            //
             this.linkLabel28.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel28.AutoSize = true;
@@ -640,9 +640,9 @@
             this.linkLabel28.TabStop = true;
             this.linkLabel28.Text = "Feed";
             this.linkLabel28.Click += new System.EventHandler(this.Feed_Click);
-            // 
+            //
             // linkLabel29
-            // 
+            //
             this.linkLabel29.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel29.AutoSize = true;
@@ -658,9 +658,9 @@
             this.linkLabel29.TabStop = true;
             this.linkLabel29.Text = "Handhold";
             this.linkLabel29.Click += new System.EventHandler(this.Handhold_Click);
-            // 
+            //
             // linkLabel30
-            // 
+            //
             this.linkLabel30.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel30.AutoSize = true;
@@ -676,9 +676,9 @@
             this.linkLabel30.TabStop = true;
             this.linkLabel30.Text = "Highfive";
             this.linkLabel30.Click += new System.EventHandler(this.Highfive_Click);
-            // 
+            //
             // linkLabel31
-            // 
+            //
             this.linkLabel31.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel31.AutoSize = true;
@@ -694,9 +694,9 @@
             this.linkLabel31.TabStop = true;
             this.linkLabel31.Text = "Kick";
             this.linkLabel31.Click += new System.EventHandler(this.Kick_Click);
-            // 
+            //
             // linkLabel32
-            // 
+            //
             this.linkLabel32.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel32.AutoSize = true;
@@ -712,9 +712,9 @@
             this.linkLabel32.TabStop = true;
             this.linkLabel32.Text = "Poke";
             this.linkLabel32.Click += new System.EventHandler(this.Poke_Click);
-            // 
+            //
             // linkLabel33
-            // 
+            //
             this.linkLabel33.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel33.AutoSize = true;
@@ -730,9 +730,9 @@
             this.linkLabel33.TabStop = true;
             this.linkLabel33.Text = "Pout";
             this.linkLabel33.Click += new System.EventHandler(this.Pout_Click);
-            // 
+            //
             // linkLabel34
-            // 
+            //
             this.linkLabel34.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel34.AutoSize = true;
@@ -748,9 +748,9 @@
             this.linkLabel34.TabStop = true;
             this.linkLabel34.Text = "Punch";
             this.linkLabel34.Click += new System.EventHandler(this.Punch_Click);
-            // 
+            //
             // linkLabel35
-            // 
+            //
             this.linkLabel35.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel35.AutoSize = true;
@@ -766,9 +766,9 @@
             this.linkLabel35.TabStop = true;
             this.linkLabel35.Text = "Shrug";
             this.linkLabel35.Click += new System.EventHandler(this.Shrug_Click);
-            // 
+            //
             // linkLabel36
-            // 
+            //
             this.linkLabel36.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel36.AutoSize = true;
@@ -784,9 +784,9 @@
             this.linkLabel36.TabStop = true;
             this.linkLabel36.Text = "Slap";
             this.linkLabel36.Click += new System.EventHandler(this.Slap_Click);
-            // 
+            //
             // linkLabel37
-            // 
+            //
             this.linkLabel37.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel37.AutoSize = true;
@@ -802,9 +802,9 @@
             this.linkLabel37.TabStop = true;
             this.linkLabel37.Text = "Smug";
             this.linkLabel37.Click += new System.EventHandler(this.Smug_Click);
-            // 
+            //
             // linkLabel38
-            // 
+            //
             this.linkLabel38.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel38.AutoSize = true;
@@ -820,9 +820,9 @@
             this.linkLabel38.TabStop = true;
             this.linkLabel38.Text = "Stare";
             this.linkLabel38.Click += new System.EventHandler(this.Stare_Click);
-            // 
+            //
             // linkLabel39
-            // 
+            //
             this.linkLabel39.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel39.AutoSize = true;
@@ -838,9 +838,9 @@
             this.linkLabel39.TabStop = true;
             this.linkLabel39.Text = "Think";
             this.linkLabel39.Click += new System.EventHandler(this.Think_Click);
-            // 
+            //
             // linkLabel40
-            // 
+            //
             this.linkLabel40.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel40.AutoSize = true;
@@ -856,9 +856,9 @@
             this.linkLabel40.TabStop = true;
             this.linkLabel40.Text = "Tickle";
             this.linkLabel40.Click += new System.EventHandler(this.Tickle_Click);
-            // 
+            //
             // linkLabel41
-            // 
+            //
             this.linkLabel41.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel41.AutoSize = true;
@@ -874,9 +874,9 @@
             this.linkLabel41.TabStop = true;
             this.linkLabel41.Text = "Yeet";
             this.linkLabel41.Click += new System.EventHandler(this.Yeet_Click);
-            // 
+            //
             // linkLabel42
-            // 
+            //
             this.linkLabel42.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel42.AutoSize = true;
@@ -892,9 +892,9 @@
             this.linkLabel42.TabStop = true;
             this.linkLabel42.Text = "Holo";
             this.linkLabel42.Click += new System.EventHandler(this.Holo_Click);
-            // 
+            //
             // linkLabel43
-            // 
+            //
             this.linkLabel43.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel43.AutoSize = true;
@@ -910,9 +910,9 @@
             this.linkLabel43.TabStop = true;
             this.linkLabel43.Text = "Tail";
             this.linkLabel43.Click += new System.EventHandler(this.Tail_Click);
-            // 
+            //
             // linkLabel44
-            // 
+            //
             this.linkLabel44.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel44.AutoSize = true;
@@ -928,12 +928,12 @@
             this.linkLabel44.TabStop = true;
             this.linkLabel44.Text = "Shiro";
             this.linkLabel44.Click += new System.EventHandler(this.Shiro_Click);
-            // 
+            //
             // webView21
-            // 
+            //
             this.webView21.AllowExternalDrop = true;
-            this.webView21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.webView21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.webView21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(31)))));
             this.webView21.CreationProperties = null;
@@ -944,9 +944,9 @@
             this.webView21.Size = new System.Drawing.Size(1103, 792);
             this.webView21.TabIndex = 49;
             this.webView21.ZoomFactor = 1D;
-            // 
+            //
             // label4
-            // 
+            //
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
@@ -957,9 +957,9 @@
             this.label4.Size = new System.Drawing.Size(341, 38);
             this.label4.TabIndex = 50;
             this.label4.Text = "» Random YouTube videos";
-            // 
+            //
             // linkLabel45
-            // 
+            //
             this.linkLabel45.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel45.AutoSize = true;
@@ -975,9 +975,9 @@
             this.linkLabel45.TabStop = true;
             this.linkLabel45.Text = "HL cat";
             this.linkLabel45.Click += new System.EventHandler(this.HlCat_Click);
-            // 
+            //
             // linkLabel46
-            // 
+            //
             this.linkLabel46.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkLabel46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel46.AutoSize = true;
@@ -994,13 +994,13 @@
             this.linkLabel46.Text = "Random hentai";
             this.linkLabel46.Visible = false;
             this.linkLabel46.Click += new System.EventHandler(this.RandomHentai_Click);
-            // 
+            //
             // RandomThings
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Genshin_Impact_Mod.Properties.Resources.random_images;
+            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.random_images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1576, 816);
             this.Controls.Add(this.linkLabel46);

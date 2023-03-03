@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CliWrap;
 using CliWrap.Buffered;
-using Genshin_Impact_Mod.Forms;
+using Genshin_Stella_Mod.Forms;
 using Microsoft.Toolkit.Uwp.Notifications;
 
-namespace Genshin_Impact_Mod.Scripts
+namespace Genshin_Stella_Mod.Scripts
 {
     internal abstract class Cmd
     {

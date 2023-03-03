@@ -1,4 +1,4 @@
-﻿namespace Genshin_Impact_Mod.Forms.Errors
+﻿namespace Genshin_Stella_Mod.Forms.Errors
 {
     partial class ErrorOccurred
     {
@@ -37,9 +37,9 @@
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // label2
-            // 
+            //
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Cascadia Mono", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -49,9 +49,9 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Sorry, something went wrong";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -62,9 +62,9 @@
             this.label1.Text = "Please report this error on our Discord server or send me message.\r\nDiscord: Sefi" +
     "nek#0001 ┃ E-mail: contact@sefinek.net";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // button3
-            // 
+            //
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(278, 135);
@@ -74,9 +74,9 @@
             this.button3.Text = "See debug logs";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.SeeLogs_Button);
-            // 
+            //
             // button2
-            // 
+            //
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(632, 135);
@@ -86,9 +86,9 @@
             this.button2.Text = "Discord server";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Discord_Button);
-            // 
+            //
             // button1
-            // 
+            //
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(456, 135);
@@ -98,21 +98,21 @@
             this.button1.Text = "Reinstall software";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Reinstall_Button);
-            // 
+            //
             // pictureBox1
-            // 
+            //
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Genshin_Impact_Mod.Properties.Resources.paimon_error;
+            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.paimon_error;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(212, 212);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            // 
+            //
             // button4
-            // 
+            //
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Location = new System.Drawing.Point(278, 177);
@@ -122,9 +122,9 @@
             this.button4.Text = "Scan and repair system files";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.SfcScan_Click);
-            // 
+            //
             // ErrorOccurred
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;

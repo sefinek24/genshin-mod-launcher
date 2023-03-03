@@ -7,12 +7,12 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Genshin_Impact_Mod.Models;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Models;
+using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 
-namespace Genshin_Impact_Mod.Forms.Other
+namespace Genshin_Stella_Mod.Forms.Other
 {
     public partial class RandomThings : Form
     {

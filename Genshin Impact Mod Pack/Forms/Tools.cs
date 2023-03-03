@@ -5,11 +5,11 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using DiscordRPC;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Scripts;
 using IWshRuntimeLibrary;
 using File = System.IO.File;
 
-namespace Genshin_Impact_Mod.Forms
+namespace Genshin_Stella_Mod.Forms
 {
     public partial class Tools : Form
     {

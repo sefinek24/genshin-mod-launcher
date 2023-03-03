@@ -6,13 +6,13 @@ using System.Linq;
 using System.Media;
 using System.Reflection;
 using System.Windows.Forms;
-using Genshin_Impact_Mod.Forms;
-using Genshin_Impact_Mod.Forms.Errors;
-using Genshin_Impact_Mod.Forms.Other;
-using Genshin_Impact_Mod.Properties;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Forms;
+using Genshin_Stella_Mod.Forms.Errors;
+using Genshin_Stella_Mod.Forms.Other;
+using Genshin_Stella_Mod.Properties;
+using Genshin_Stella_Mod.Scripts;
 
-namespace Genshin_Impact_Mod
+namespace Genshin_Stella_Mod
 {
     internal static class Program
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace Genshin_Impact_Mod.Scripts
+namespace Genshin_Stella_Mod.Scripts
 {
     internal class Utils
     {

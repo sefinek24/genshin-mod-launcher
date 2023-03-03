@@ -1,10 +1,10 @@
 using System;
 using System.Windows.Forms;
 using DiscordRPC;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Scripts;
 using Microsoft.Web.WebView2.Core;
 
-namespace Genshin_Impact_Mod.Forms.Other
+namespace Genshin_Stella_Mod.Forms.Other
 {
     public partial class Gallery : Form
     {

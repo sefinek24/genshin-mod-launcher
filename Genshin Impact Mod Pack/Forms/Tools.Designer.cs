@@ -1,4 +1,4 @@
-﻿namespace Genshin_Impact_Mod.Forms
+﻿namespace Genshin_Stella_Mod.Forms
 {
     sealed partial class Tools
     {
@@ -76,9 +76,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // panel1
-            // 
+            //
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.panel2);
@@ -92,9 +92,9 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
-            // 
+            //
             // panel2
-            // 
+            //
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -104,9 +104,9 @@
             this.panel2.TabIndex = 76;
             this.toolTip1.SetToolTip(this.panel2, "Close");
             this.panel2.Click += new System.EventHandler(this.Exit_Click);
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,9 +118,9 @@
             this.label1.TabIndex = 74;
             this.label1.Text = "Genshin Impact Stella Mod Pack";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // label2
-            // 
+            //
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
@@ -131,9 +131,9 @@
             this.label2.TabIndex = 82;
             this.label2.Text = ">> Settings and utils <<";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // settings_Label
-            // 
+            //
             this.settings_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.settings_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.settings_Label.AutoSize = true;
@@ -148,13 +148,13 @@
             this.settings_Label.TabStop = true;
             this.settings_Label.Text = "Delete all cache and log files";
             this.settings_Label.Click += new System.EventHandler(this.DeleteCache_Button);
-            // 
+            //
             // pictureBox3
-            // 
+            //
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_recycle_bin;
+            this.pictureBox3.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_recycle_bin;
             this.pictureBox3.Location = new System.Drawing.Point(343, 181);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
@@ -162,9 +162,9 @@
             this.pictureBox3.TabIndex = 81;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.DeleteCache_Button);
-            // 
+            //
             // linkLabel1
-            // 
+            //
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel1.AutoSize = true;
@@ -179,13 +179,13 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "ReShade logs";
             this.linkLabel1.Click += new System.EventHandler(this.ReShadeLogs_Button);
-            // 
+            //
             // pictureBox1
-            // 
+            //
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_edit_property;
+            this.pictureBox1.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_edit_property;
             this.pictureBox1.Location = new System.Drawing.Point(344, 357);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
@@ -193,9 +193,9 @@
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.ReShadeLogs_Button);
-            // 
+            //
             // linkLabel2
-            // 
+            //
             this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel2.AutoSize = true;
@@ -210,13 +210,13 @@
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Launcher logs";
             this.linkLabel2.Click += new System.EventHandler(this.LauncherLogs_Click);
-            // 
+            //
             // pictureBox2
-            // 
+            //
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_edit_property;
+            this.pictureBox2.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_edit_property;
             this.pictureBox2.Location = new System.Drawing.Point(343, 296);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
@@ -224,9 +224,9 @@
             this.pictureBox2.TabIndex = 86;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.LauncherLogs_Click);
-            // 
+            //
             // label4
-            // 
+            //
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,9 +237,9 @@
             this.label4.TabIndex = 88;
             this.label4.Text = "Log files";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // label5
-            // 
+            //
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,9 +250,9 @@
             this.label5.TabIndex = 89;
             this.label5.Text = "Config files";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // linkLabel3
-            // 
+            //
             this.linkLabel3.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel3.AutoSize = true;
@@ -267,13 +267,13 @@
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "See ReShade config";
             this.linkLabel3.Click += new System.EventHandler(this.ReShadeConfig_Click);
-            // 
+            //
             // pictureBox4
-            // 
+            //
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_notepad;
+            this.pictureBox4.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_notepad;
             this.pictureBox4.Location = new System.Drawing.Point(25, 296);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(24, 24);
@@ -281,9 +281,9 @@
             this.pictureBox4.TabIndex = 91;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.ReShadeConfig_Click);
-            // 
+            //
             // linkLabel4
-            // 
+            //
             this.linkLabel4.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel4.AutoSize = true;
@@ -298,13 +298,13 @@
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "See FPS Unlocker config";
             this.linkLabel4.Click += new System.EventHandler(this.UnlockerConfig_Click);
-            // 
+            //
             // pictureBox5
-            // 
+            //
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_notepad;
+            this.pictureBox5.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_notepad;
             this.pictureBox5.Location = new System.Drawing.Point(25, 327);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
@@ -312,9 +312,9 @@
             this.pictureBox5.TabIndex = 93;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.UnlockerConfig_Click);
-            // 
+            //
             // linkLabel5
-            // 
+            //
             this.linkLabel5.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel5.AutoSize = true;
@@ -329,13 +329,13 @@
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Scan and repair system files";
             this.linkLabel5.Click += new System.EventHandler(this.ScanSysFiles_Click);
-            // 
+            //
             // pictureBox6
-            // 
+            //
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_tools;
+            this.pictureBox6.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_tools;
             this.pictureBox6.Location = new System.Drawing.Point(25, 211);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(24, 24);
@@ -343,13 +343,13 @@
             this.pictureBox6.TabIndex = 96;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.ScanSysFiles_Click);
-            // 
+            //
             // pictureBox7
-            // 
+            //
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_shortcut;
+            this.pictureBox7.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_shortcut;
             this.pictureBox7.Location = new System.Drawing.Point(25, 181);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(24, 24);
@@ -357,9 +357,9 @@
             this.pictureBox7.TabIndex = 99;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.CreateShortcut_Button);
-            // 
+            //
             // createShortcut_Label
-            // 
+            //
             this.createShortcut_Label.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.createShortcut_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.createShortcut_Label.AutoSize = true;
@@ -374,9 +374,9 @@
             this.createShortcut_Label.TabStop = true;
             this.createShortcut_Label.Text = "Create shortcut on desktop";
             this.createShortcut_Label.Click += new System.EventHandler(this.CreateShortcut_Button);
-            // 
+            //
             // label7
-            // 
+            //
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
@@ -387,9 +387,9 @@
             this.label7.TabIndex = 100;
             this.label7.Text = "Misc";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // label3
-            // 
+            //
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -400,13 +400,13 @@
             this.label3.TabIndex = 101;
             this.label3.Text = "Cache and logs";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // pictureBox8
-            // 
+            //
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_recycle_bin;
+            this.pictureBox8.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_recycle_bin;
             this.pictureBox8.Location = new System.Drawing.Point(343, 211);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(24, 24);
@@ -414,9 +414,9 @@
             this.pictureBox8.TabIndex = 103;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.DeleteWebViewCache_Click);
-            // 
+            //
             // linkLabel6
-            // 
+            //
             this.linkLabel6.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel6.AutoSize = true;
@@ -431,9 +431,9 @@
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Delete only WebView2 cache";
             this.linkLabel6.Click += new System.EventHandler(this.DeleteWebViewCache_Click);
-            // 
+            //
             // panel3
-            // 
+            //
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Location = new System.Drawing.Point(875, 229);
@@ -441,13 +441,13 @@
             this.panel3.Size = new System.Drawing.Size(25, 23);
             this.panel3.TabIndex = 104;
             this.panel3.Click += new System.EventHandler(this.Notepad_Click);
-            // 
+            //
             // pictureBox9
-            // 
+            //
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_edit_property;
+            this.pictureBox9.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_edit_property;
             this.pictureBox9.Location = new System.Drawing.Point(343, 387);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(24, 24);
@@ -455,9 +455,9 @@
             this.pictureBox9.TabIndex = 106;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Click += new System.EventHandler(this.InstallationLog_Button);
-            // 
+            //
             // linkLabel7
-            // 
+            //
             this.linkLabel7.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel7.AutoSize = true;
@@ -472,13 +472,13 @@
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Text = "Installation log";
             this.linkLabel7.Click += new System.EventHandler(this.InstallationLog_Button);
-            // 
+            //
             // pictureBox10
-            // 
+            //
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_edit_property;
+            this.pictureBox10.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_edit_property;
             this.pictureBox10.Location = new System.Drawing.Point(344, 417);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(24, 24);
@@ -486,9 +486,9 @@
             this.pictureBox10.TabIndex = 108;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.InstallationErrorLog_Button);
-            // 
+            //
             // linkLabel8
-            // 
+            //
             this.linkLabel8.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel8.AutoSize = true;
@@ -503,9 +503,9 @@
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "Installation error log";
             this.linkLabel8.Click += new System.EventHandler(this.InstallationErrorLog_Button);
-            // 
+            //
             // label6
-            // 
+            //
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
@@ -516,9 +516,9 @@
             this.label6.Size = new System.Drawing.Size(104, 23);
             this.label6.TabIndex = 109;
             this.label6.Text = "(Do not edit)";
-            // 
+            //
             // version_Label
-            // 
+            //
             this.version_Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.version_Label.AutoSize = true;
             this.version_Label.BackColor = System.Drawing.Color.Transparent;
@@ -530,22 +530,22 @@
             this.version_Label.TabIndex = 110;
             this.version_Label.Text = "Version";
             this.version_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
+            //
             // pictureBox13
-            // 
+            //
             this.pictureBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::Genshin_Impact_Mod.Properties.Resources.icons8_edit_property;
+            this.pictureBox13.Image = global::Genshin_Stella_Mod.Properties.Resources.icons8_edit_property;
             this.pictureBox13.Location = new System.Drawing.Point(343, 327);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(24, 24);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 117;
             this.pictureBox13.TabStop = false;
-            // 
+            //
             // linkLabel11
-            // 
+            //
             this.linkLabel11.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel11.AutoSize = true;
@@ -560,13 +560,13 @@
             this.linkLabel11.TabStop = true;
             this.linkLabel11.Text = "Main error log";
             this.linkLabel11.Click += new System.EventHandler(this.ErrorLogs_Click);
-            // 
+            //
             // Tools
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Genshin_Impact_Mod.Properties.Resources.settings;
+            this.BackgroundImage = global::Genshin_Stella_Mod.Properties.Resources.settings;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1032, 579);
             this.Controls.Add(this.pictureBox13);

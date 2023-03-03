@@ -2,9 +2,9 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using DiscordRPC;
-using Genshin_Impact_Mod.Scripts;
+using Genshin_Stella_Mod.Scripts;
 
-namespace Genshin_Impact_Mod.Forms
+namespace Genshin_Stella_Mod.Forms
 {
     public partial class Links : Form
     {
